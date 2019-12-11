@@ -13,6 +13,7 @@ public class FooterComponentBean extends AbstractSightlyComponentBean
     private static final Logger LOG = LoggerFactory.getLogger(FooterComponentBean.class);
     private static final String FOOTER_PARSYS_NODE_NAME = "footPar";
     private String footParPath;
+    private String footerLink;
 
     @Override
     protected void init() throws Exception
