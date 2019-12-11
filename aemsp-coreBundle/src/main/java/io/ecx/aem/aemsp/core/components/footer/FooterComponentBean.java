@@ -25,4 +25,9 @@ public class FooterComponentBean extends AbstractSightlyComponentBean
     {
         return footParPath;
     }
+    
+    public void testMethod()
+    {
+    	System.out.println("test msg");
+    }
 }
