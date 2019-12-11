@@ -1,0 +1,49 @@
+<div  data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.votingmodule.VotingModuleComponentBean" data-slyw-unwrap>
+	<model data-sly-test.model="${componentBean.model}" data-sly-unwrap/>
+	<submitButton data-sly-test.submitButton="${'aemsp_voting_module_submit_text' @ i18n}" data-sly-unwrap/>
+	<thankYou data-sly-test.thankYou="${'aemsp_voting_module_thankyou_message_text' @ i18n}" data-sly-unwrap/>
+	<authorMode data-sly-test.author="${componentBean.authorMode}" data-sly-unwrap/>
+	
+	<div class="module module-content module-voting well" data-sly-test="${author || model || componentBean.votingPage}">	
+		<div data-sly-test.showError="${author && !wcmmode.edit && !wcmmode.preview && !model}" class="alert alert-danger" role="alert">	
+			${'aemsp_votingModuleSetupMessage' @ i18n}
+		</div>
+		<div data-sly-test="${(!showError && model) || componentBean.votingPage}" data-sly-unwrap>
+			<h2 class="beforeSubmit">${model.headline ? model.headline : '¶'}</h2>
+			<h2 class="afterSubmit hidden">${model.thankyouMessage ? model.thankyouMessage : thankYou}</h2>
+			<p>${model.question ? model.question : '¶'}</p>
+			
+			<div class="module form ${author ? '' : 'hidden'}">
+				<div class="contentForm">
+					<form id="votingForm" action="/servlets/voting" method="post" data-cookie-id="${model.uniqueId}" data-voting-result-url="${resource.path}.voting.json" data-parsley-validate="">
+						<input type="hidden" name="path" value="${resource.path}" />
+						<div class="well-border">
+							<div data-sly-test.notvalid="${!componentBean.validQuestions && author}" class="alert alert-info" role="alert">	
+								${'aemsp_votingModuleMinQuestionMessage' @ i18n}
+							</div> 	
+							<div data-sly-test="${!notvalid}" data-sly-list.answer="${model.answerList}" class="${model.multiselection ? '' : 'form-group radiogroupItem'}">		
+								<div class="form-group ${model.type @ context='styleToken'}Item">
+									 <label for="${model.type}-${answerList.count}">
+										  <input class="form-control" type="${model.type}" checked="${answer.selected ? 'checked' : ''}" id="${model.type}-${answerList.count}" name="vote" value="${answer.answer}" required=""  data-parsley-trigger="ready">
+										  <span>${answer.answer}</span>
+									 </label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group formButtons">
+							<button class="btn btn-submit" type="submit" disabled>${model.submit ? model.submit : submitButton}</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="votingContainer well-border hidden">
+					<!-- Results will rendered here via Javascript-->
+			</div>
+		</div>
+	</div>
+</div>
+<div data-sly-test="${componentBean.votingPage && model.answerList}" data-sly-unwrap>
+	<h3><a href="${resource.path}.votingexport.csv"> ${'aemsp_voting_module_csv_export_text' @ i18n}</a></h3>
+</div>
+
+

@@ -1,0 +1,7 @@
+#base=css
+flora/screen.min.css
+fonts/oeav-iconfont-fauna/oeav-iconfont.eot
+fonts/oeav-iconfont-fauna/oeav-iconfont.svg
+fonts/oeav-iconfont-fauna/oeav-iconfont.ttf
+fonts/oeav-iconfont-fauna/oeav-iconfont.woff
+fonts/oeav-iconfont-fauna/oeav-iconfont.woff2

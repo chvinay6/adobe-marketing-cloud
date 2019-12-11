@@ -1,0 +1,5 @@
+<div class="table-container" data-sly-test="${properties.tableData}">
+	${properties.tableData @context='html'}
+</div>
+<div data-sly-test="${wcmmode.edit && !properties.tableData}" class="cq-placeholder" data-emptytext="${'aemsp_tableEdit' @ i18n}"></div>
+

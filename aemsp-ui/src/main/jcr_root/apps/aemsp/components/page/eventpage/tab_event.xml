@@ -1,0 +1,61 @@
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured"
+	jcr:title="aemsp_tab_event" sling:resourceType="granite/ui/components/foundation/container">
+
+	<items jcr:primaryType="nt:unstructured">
+
+		<general jcr:primaryType="nt:unstructured" jcr:title="accelerator_basic_general"
+			sling:resourceType="granite/ui/components/foundation/section">
+
+			<layout jcr:primaryType="nt:unstructured" margin="{Boolean}false"
+				sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+			<items jcr:primaryType="nt:unstructured">
+				<column jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/container">
+					<items jcr:primaryType="nt:unstructured">
+						<eventHeadline jcr:primaryType="nt:unstructured"
+							jcr:title="aemsp_tab_event" sling:resourceType="granite/ui/components/foundation/form/fieldset">
+							<items jcr:primaryType="nt:unstructured">
+
+								<headline jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/textfield"
+									fieldLabel="aemsp_eventHeadlineLabel" name="./parHead/articlemainheadline/text"
+									required="{Boolean}true" />
+
+								<location jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/textfield"
+									fieldLabel="aemsp_eventLocationLabel" name="./parHead/articleprefix/text"
+									required="{Boolean}true" />
+
+								<fromDate jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/datepicker"
+									type="datetime" fieldLabel="aemsp_eventFromDate" name="./fromDate"
+									required="{Boolean}true" />
+
+								<toDate jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/datepicker"
+									type="datetime" fieldLabel="aemsp_eventToDate"
+									fieldDescription="aemsp_eventToDescription"
+									cq:showOnCreate="{Boolean}true" name="./toDate" />
+
+								<additionalInfo jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/textfield"
+									fieldLabel="aemsp_eventTimeLabel" fieldDescription="aemsp_eventTimeDescription"
+									cq:showOnCreate="{Boolean}true" name="./additionalInfo" />
+
+								<shorttext jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+									fieldLabel="aemsp_eventShortTextLabel" fieldDescription="aemsp_eventShortTextDescription"
+									name="./parRte/shorttext/text" cq:showOnCreate="{Boolean}true" />
+
+							</items>
+						</eventHeadline>
+					</items>
+				</column>
+			</items>
+		</general>
+
+	</items>
+
+</jcr:root>

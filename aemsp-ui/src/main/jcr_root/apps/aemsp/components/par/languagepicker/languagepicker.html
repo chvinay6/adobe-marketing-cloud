@@ -1,0 +1,12 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.languagepicker.LanguagePickerComponentBean" data-sly-unwrap>
+	<div data-sly-test="${componentBean.hasMultipleVersions}" class="langNavigation" >
+		<div class="dropdown">
+			<a href="#" class="dropdown-toggle" id="articleLangSwitch"
+				data-toggle="dropdown" role="button" aria-haspopup="true"
+				aria-expanded="false">${componentBean.currentLanguage}</a>
+			<ul data-sly-list="${componentBean.languageProps}" class="dropdown-menu" aria-labelledby="articleLangSwitch">
+				<li><a href="${item.link}">${item.localName}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

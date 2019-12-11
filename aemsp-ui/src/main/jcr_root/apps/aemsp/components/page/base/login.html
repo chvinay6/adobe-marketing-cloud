@@ -1,0 +1,63 @@
+<div class="ecx" data-sly-use.componentBean="${'io.ecx.aem.aemsp.core.components.page.base.LoginComponentBean'}">
+	<div id="login" style=" display: none;">
+
+		<!-- FancyboxLoginForm Start -->
+		<div class="modalForm">
+
+			<div class="headlines">
+
+				<h3><span class="oeav oeav-lock"></span> Login</h3>
+
+				<p>${'aemsp_login_credentials' @ i18n}</p>
+				
+				<!-- Fancybox Error Message End -->
+				<div class="modalFormError" style="display: none;">
+
+						<p class="error"><strong>${'aemsp_login_errorstrong' @ i18n}</strong></p>
+
+						<p class="error">${'aemsp_login_error' @ i18n}</p>
+
+				</div>
+				<!-- Fancybox Error Message End -->
+
+			</div>
+
+			<div class="module form">
+
+				<div class="contentForm">
+
+					<form id="loginModalForm" action="/servlets/login" method="post" data-parsley-validate="">
+
+						<div class="form-group textItem">
+							<input class="form-control" type="text" id="login-name" name="login-name" value="" data-parsley-maxlength="50" placeholder="Name" required>
+						</div>
+
+						<div class="form-group textItem">
+							<input class="form-control" type="password" id="login-password" name="login-password" value="" data-parsley-maxlength="50" placeholder="${'aemsp_login_password_placeholder' @ i18n}" required>
+						</div>
+
+						<div class="form-group checkboxItem">
+		                <label for="checkbox-1">
+		                    <input class="form-control" type="checkbox" id="login-stay" name="login-stay" value="">
+		                    <span>${'aemsp_login_staylogged' @ i18n}</span>
+		                </label>
+		            </div>
+
+						<div class="form-group formButtons">
+							<button class="btn btn-submit" type="submit">Login</button>
+						</div>
+
+						<a href="${componentBean.forgotPasswordLink}">${componentBean.forgotPasswordText ? componentBean.forgotPasswordText : 'aemsp_login_forgotpassword' @ i18n}</a><br />
+						<a href="${componentBean.registerLink}">${componentBean.registerText ? componentBean.registerText : 'aemsp_login_register' @ i18n}</a>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- FancyboxLoginForm End -->
+
+	</div>
+</div>

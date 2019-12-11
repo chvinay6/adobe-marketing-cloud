@@ -1,0 +1,17 @@
+<div data-sly-use.analyticsComponentBean="${'io.ecx.aem.aemsp.core.components.par.googleanalytics.GoogleAnalyticsComponentBean'}" data-sly-unwrap>
+	<!-- BEGIN GOOGLE Tag Manager DATALAYER -->
+<script>
+window.dataLayer = window.dataLayer || [];
+dataLayer.push({"pageTemplate":"${analyticsComponentBean.templateName @context='uri'}"});
+</script>
+<!-- END GOOGLE Tag Manager DATALAYER -->
+<!-- BEGIN GOOGLE Tag Manager CODE -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${analyticsComponentBean.googleAnalyticsId @ context='uri'}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer',"${analyticsComponentBean.googleAnalyticsId @ context='uri'}");</script>
+<!-- END GOOGLE Tag Manager CODE -->
+</div>

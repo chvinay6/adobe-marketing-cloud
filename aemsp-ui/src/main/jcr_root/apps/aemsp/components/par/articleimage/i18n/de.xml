@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="de"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+  	<aemsp_articleimageName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articleimageName"
+        sling:message="Artikel Bild"/>
+        
+  	<aemsp_articleimage_upload
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articleimage_upload"
+        sling:message="Hochladen"/>  
+         
+    <aemsp_articleimageCaption
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articleimageCaption"
+        sling:message="Bildunterschrift"/> 
+        
+    <aemsp_articleimageCopyright
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articleimageCopyright"
+        sling:message="Copyright"/> 
+   
+    <aemsp_articleimageTitle
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articleimageTitle"
+        sling:message=">Titel"/> 
+       
+    <aemsp_articleimageAlt
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articleimageAlt"
+        sling:message="Alt Text"/> 
+</jcr:root>

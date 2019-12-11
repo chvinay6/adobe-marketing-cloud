@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+  	
+  	<aemsp_videomodule
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_videomodule"
+        sling:message="Video Module"/>
+    
+    <aemsp_videmodule_type
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_videmodule_type"
+        sling:message="Type"/>
+    
+    <aemsp_videomodule_id
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_videomodule_id"
+        sling:message="Video ID"/>
+    
+    <aemsp_videomodule_title
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_videomodule_title"
+        sling:message="Title"/>
+    
+    <aemsp_videomodule_caption
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_videomodule_caption"
+        sling:message="Caption"/>
+        
+    <aemsp_videomodule_copyright
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_videomodule_copyright"
+        sling:message="Copyright"/>
+        
+</jcr:root>

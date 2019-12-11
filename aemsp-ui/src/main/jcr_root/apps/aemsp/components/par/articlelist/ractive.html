@@ -1,0 +1,171 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.list.ListComponentBean" data-sly-unwrap></div>
+<div class="module module-search" data-sly-test=${componentBean.filterList}>          
+	<div class="module form">
+	    <div class="search-menu contentForm">
+	        <div class="search-filters" id="allTeaser-filter">
+	            <form role="search" action="#" method="POST">
+	            	<div class="filter-wrapper">
+		                <div class="search-label">
+	<!-- 	                    <strong>${'aemsp_articlelistAddFilter' @ i18n}</strong> -->
+		                </div>
+						<div data-sly-list.filter="${componentBean.filterList}" data-sly-unwrap>
+			                <div class="search-filter">
+			                    <div class="dropdown">
+			                    <button class="btn btn-gray btn-block dropdown-toggle" type="button" id="dropdownMenu${filterList.count}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+			                     ${filter.filter.name}
+			                    </button>
+			                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu${filterList.count}" data-sly-list.item="${filter.items}">
+			                            <li>
+			                                <div class="form-group checkboxItem">
+			                                    <label for="check_${filterList.count}${itemList.count}">
+			                                        <input class="filter" type="checkbox" id="check_${filterList.count}${itemList.count}" name="{{ filters }}" value="${item.value}">
+			                                        <span>${item.name}</span>
+			                                    </label>
+			                                </div>
+			                            </li>		                         
+			                        </ul>
+			                    </div>
+			                </div>
+			             </div>  
+		             </div> 
+	                 <div class="search-filter-selected">
+	                    {{#filters}}
+	                        <div class="filter-tag" on-click="remove-filter">{{ this }}<span class="oeav oeav-cross-circle"></span></div>
+	                    {{/filters}}
+	                 </div>
+	            </form>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+{{#if searchresult}}
+  {{#with searchresult}}
+	  <ul class="filter" id="pageListOne-filter" role="form">
+	    {{#if facets}}
+	    {{#each facets:i}}
+	      <li class="facet-category {{#if hideOnXs}}hidden-xs{{/if}}" >
+	        <h3>{{title}}</h3>
+	        <ul class="facet-category-facets">
+	          {{#each options:i}}
+	            <li>
+	              <label on-click="facet-change" class="radio-inline">
+	                <input type="radio" id="{{{categoryId}}}{{id}}" name="{{{categoryId}}}" data-facetid="{{id}}" value="{{id}}" data-categoryid="{{{categoryId}}}" />
+	                <span class="icon" aria-hidden="true"></span>
+	                <span class="title">{{title}}</span>
+	                <span class="count">{{numberOfHits}}</span>
+	              </label>
+	            </li>
+	          {{/each}}
+	        <ul>
+	      </li>
+	    {{/each}}
+	    {{/if}}
+	  </ul>
+	  <div class="results" id="allTeaser-results">
+	    {{#if numberOfHits == 0}}
+		    <div class="items">
+		      <div class="module module-content" intro='fade:400'>
+		        <p>${'aemsp_articlelistNoResults' @ i18n}</p>
+		      </div>
+		    </div>
+	    {{else}}
+	      {{#if results}}
+	      <div class="items">
+	        <div class="wrapper">
+	          {{#each results:i}}
+	            <div class="module module-imageTeaser {{#if type == 'article'}}module-articleListTeaser{{/if}}{{#if type == 'offer'}}module-offerListTeaser{{/if}}{{#if type == 'event'}}module-eventListTeaser{{/if}}{{#if type == 'commercial'}}module-commercialListTeaser{{/if}}" data-timestamp="{{timestamp}}">
+	              {{#if type == "article"}}
+	                <figure intro='fade:400'>
+	                    <a href="{{link}}">
+				          <picture>
+				            <source srcset="{{image[0]}}" media="(min-width: 1280px)">
+				            <source srcset="{{image[1]}}" media="(min-width: 992px) and (max-width: 1279px)">
+				            <source srcset="{{image[2]}}" media="(min-width: 768px) and (max-width: 991px)">
+				            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" srcset="{{image[2]}}" alt="{{image[3]}}">
+				          </picture>
+                      </a>
+	                </figure>
+				  {{/if}}
+	              <div class="content" intro='fade:500'>
+	              	{{#if type == "event" || type == "offer" || type == "commercial"}}
+	              		<div class="wrapper">
+	              		{{#if metatop}}
+							  {{#each metatop:i}}
+							  <div class="metaInfo">
+								   <ul>
+										 <li>
+										     <offerEndDate data-sly-test.offerenddate="${'aemsp_bidding_enddate' @ i18n}" data-sly-unwrap></offerEndDate>
+											 {{#if type == "offer"}}<i>${offerenddate}: </i>{{/if}} {{startdate}} {{#if enddate}}- {{enddate}}{{/if}}
+										 </li>
+										 {{#if time}}
+											 <li>
+												{{time}}
+											 </li>
+										 {{/if}}
+										 {{#if tags}}
+											 {{#each tags:i}}
+											 <li>
+												 <strong>{{tag}}</strong>
+											 </li>
+											 {{/each}}
+										 {{/if}}
+								   </ul>
+							  </div>
+							  {{/each}}
+						  {{/if}}
+	              		</div>
+					{{/if}}
+	              		
+	              	<div class="head">	
+                        <span class="prefix border">
+                        	  {{#if type == "offer" }}
+		                            <defaultRegion data-sly-test.offerotherregion="${'aemsp_region_other' @ i18n}" data-sly-unwrap></defaultRegion>
+		                            <a href="{{link}}">{{#if topline}} {{topline}} {{else}} ${offerotherregion} {{/if}}<div class="tag-wrapper"></div></a>
+		                       {{else}}
+	                        	 <breakingDefaultText data-sly-test.breakingDefaultText="${'aemsp_articlePrefixTopArticle' @ i18n}" data-sly-unwrap></breakingDefaultText>
+	                             <a href="{{link}}">{{topline}}<div class="tag-wrapper">{{#if toparticle}}<span class="tag">${componentBean.breakingNewsText ? componentBean.breakingNewsText  : breakingDefaultText}</span>{{/if}}</div></a>
+                        	  {{/if}}	
+                        </span>
+                        <h3><a href="{{link}}">{{headline}}</a></h3>
+	                </div>
+                    <p>
+                        {{{text}}}
+                        {{#if type != "offer" }}	                       
+                        <a class="teaser" href="{{link}}" title="{{headline}}" rel="nofollow">${'aemsp_articlelistReadMore' @ i18n}</a>
+                    	{{/if}}
+                    </p>   
+                     {{#if metabottom}}
+                     	 {{#each metabottom:i}}
+                     	 <div class="wrapper">
+		                       <div class="metaInfo">
+		                           {{#if datetime}}<time datetime="{{datetime}}">{{datetime}}</time>{{/if}}
+		                           {{#if type == "commercial" && metatext}}
+		                            	<jurisdiction data-sly-test.jurisdiction="${'aemsp_commentry_jurisdiction' @ i18n}" data-sly-unwrap></jurisdiction>
+		                            	${jurisdiction}: {{metatext}}
+		                           {{else}}		                            
+									    {{#if metatext}}
+									    	{{metatext}}
+									    {{/if}}
+								  {{/if}}
+		                       </div>
+		                    </div>
+		                  {{/each}}
+		              {{/if}}
+	              </div>
+	            </div>
+	          {{/each}}
+	        </div>
+	      </div>
+	      {{/if}}	
+	    {{/if}}
+	    {{#if moreResultsAvailable}}
+		    <div class="module module-content">
+		        <a class="btn btn-gray btn-loadmore" on-click="load-more">
+		            ${'aemsp_articlelistLoadMore' @ i18n}
+		        </a>
+		    </div>
+	    {{/if}}
+	  </div>
+  {{/with}}
+{{/if}}

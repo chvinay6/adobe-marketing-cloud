@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+  	<aemsp_featuredArticleName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_featuredArticleName"
+        sling:message="Featured Article"/>
+        
+    <aemsp_featuredArticleLabel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_featuredArticleLabel"
+        sling:message="Article"/>
+        
+    <aemsp_featuredArticleDescription
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_featuredArticleDescription"
+        sling:message="Choose the article you want to display as featured article"/>
+        
+	<aemsp_articleNotValidLanguageError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidLanguageError"
+		sling:message="The selected article has to be chosen from the same language this component is placed on."/>
+		
+	<aemsp_articleNotValidTypeError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidTypeError"
+		sling:message="The selection has to be an article page."/>
+		
+	<aemsp_articleNotValidPublishError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidPublishError"
+		sling:message="The selection has to be an article, which has already been published."/>
+		
+	<aemsp_readMore
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_readMore"
+		sling:message="Read more"/>
+</jcr:root>

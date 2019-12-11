@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+  	
+  	<aemsp_search_placeholder
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_search_placeholder"
+        sling:message="Search for..."/>
+        
+    <aemsp_search_label
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_search_label"
+        sling:message="Search Root Tag"/>
+        
+    <aemsp_search_opts
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_search_opts"
+        sling:message="Search Options"/>
+        
+    <aemsp_searchform
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_searchform"
+        sling:message="Search"/>
+        
+</jcr:root>

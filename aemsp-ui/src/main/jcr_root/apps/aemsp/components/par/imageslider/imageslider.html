@@ -1,0 +1,22 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.imageslider.ImageSliderComponentBean" data-sly-unwrap></div>
+
+<!--/* If dialog hasn't been accessed yet show placeholder */-->
+<div data-sly-test="${!properties.headline}" class="cq-placeholder" data-emptytext="${'aemsp_imageslider_imageslider' @ i18n}"></div>
+
+<!--/* If dialog has been accesed, headline will be set but there may be too few images, show different placeholder  */-->
+<div data-sly-test.enoughImages="${componentBean.numberOfImages > 3}"></div>
+<div data-sly-test="${properties.headline && !enoughImages}" class="cq-placeholder" data-emptytext="${'aemsp_imageslider_notenough' @ i18n} (${componentbean.numberOfImages}/4)"></div>
+
+<!--/* Else render the component  */-->
+<div data-sly-test="${properties.headline && enoughImages}" class="module module-content carousel imageSlider" data-auto="false">
+	<h2>${properties.headline}</h2>
+	<div class="carousel-content">
+		<section>
+			<div data-sly-list.image="${componentBean.getImages}" data-sly-unwrap>
+				<article>
+					<div data-sly-resource="${@ path=image.path,resourceType='aemsp/components/par/imageslider/slide'}" data-sly-unwrap></div>
+				</article>
+			</div>
+		</section>
+	</div>
+</div>

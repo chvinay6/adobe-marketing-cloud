@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+		
+	<aemsp_articleMainHeadline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleMainHeadline"
+		sling:message="Artikel Überschrift"/>
+	
+	<aemsp_articleMainHeadlineText
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleMainHeadlineText"
+		sling:message="Überschrift"/>
+				
+</jcr:root>

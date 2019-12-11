@@ -1,0 +1,14 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.footer.FooterComponentBean" data-sly-unwrap></div>
+<h2 data-sly-test="${properties.headline}">${properties.headline}</h2>
+
+<div class="footer-linklist">
+
+	<div data-sly-list.column="${resource.listChildren}" data-sly-unwrap>
+		<div>
+			<ul data-sly-list.link="${column.listChildren}">
+				<li><a data-sly-use.linkchecker="${'io.ecx.aem.aemsp.core.components.par.linkchecker.LinkCheckerComponentBean' @link=link.url}" href="${linkchecker.validLink}">${link.text}</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>

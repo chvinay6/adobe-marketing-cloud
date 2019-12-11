@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="aemsp_commentry_prefix"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured"
+    	sling:resourceType="granite/ui/components/foundation/container">
+    	<layout jcr:primaryType="nt:unstructured"
+    		margin="{Boolean}false"
+    		sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+    		type="nav" />
+    	<items  jcr:primaryType="nt:unstructured">
+   			<column jcr:primaryType="nt:unstructured"
+   				sling:resourceType="granite/ui/components/foundation/container">	
+   				<items jcr:primaryType="nt:unstructured">
+	  				<region jcr:primaryType="nt:unstructured"
+						name="./region"
+						fieldLabel="aemsp_commentry_prefix_text"
+						multiple="{Boolean}false"
+						sling:resourceType="granite/ui/components/foundation/form/select">
+						<items jcr:primaryType="nt:unstructured">
+							<option1 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_ooe"/>
+							<option2 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_noe" />
+							<option3 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_wie"/>
+							<option4 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_bur"/>
+							<option5 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_kae"/>
+							<option6 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_tir"/>
+							<option7 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_ste"/>
+							<option8 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_sab"/>
+							<option9 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_vor"/>
+							<option10 jcr:primaryType="nt:unstructured"
+								text="aemsp_region_deu"/>
+						</items>	
+					</region>
+				</items>  		
+			</column>
+    	</items>
+    </content>
+</jcr:root>

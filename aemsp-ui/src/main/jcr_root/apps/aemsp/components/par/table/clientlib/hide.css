@@ -1,0 +1,50 @@
+.coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-select--cellHorizontalAlignment, .coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-select--cellVerticalAlignment
+{
+	display: none !important;
+}
+
+.coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-columnContainer--idAttribute, .coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-columnContainer--scopeAttribute, .coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-columnContainer--headerAttribute 
+{
+	display: none !important;
+}
+
+.coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-columnContainer--borderBottom 
+{
+	border-bottom: none !important;
+}
+
+.coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-table input[data-type=cellpadding], .coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-table input[data-type=border], .coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-table input[data-type=cellspacing] 
+{
+	display: none !important;
+}
+
+.coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-table:nth-child(1) .coral-RichText-dialog-column:nth-child(2)
+{
+	font-size: 0px;
+}
+
+.coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-select--cellType
+{
+	width: 12.5rem !important;
+}
+
+.coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-table input[data-type=caption]
+{
+	min-width: 233px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) 
+{
+	.coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-table input[data-type=caption] 
+	{
+		min-width: 231px;
+	}
+}
+
+@-moz-document url-prefix() 
+{ 
+  .coral-RichText-dialog--tableandcellprops .coral-RichText-dialog-table input[data-type=caption] 
+  {
+     min-width:232px;
+  }
+}

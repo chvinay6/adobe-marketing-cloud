@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2012-06-08T00:00:00.000+02:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/wcm/core/templates/designpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="aemsp"
+        sling:resourceType="wcm/core/components/designer">
+        
+  		<articlepage jcr:primaryType="nt:unstructured">
+  		
+            <rtePar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:Content]" />
+                
+            <parSidebar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:Content,group:Sidebar]" />     
+                         
+		</articlepage>
+		
+		<commentrypage jcr:primaryType="nt:unstructured">
+  		
+            <rtePar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:Content]" />
+                
+            <rteParSidebar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:Content]" />     
+                         
+		</commentrypage>
+		
+		<biddingpage jcr:primaryType="nt:unstructured">
+  		
+            <rtePar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:Content]" />
+                
+            <rteParSidebar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:Content]" />     
+                         
+		</biddingpage>
+        
+        <categorypage jcr:primaryType="nt:unstructured">
+        	
+        	<parMain
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:List,group:Content]" />
+              
+            <parSidebar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:Content,group:Sidebar]" />         
+                     
+        </categorypage>   
+       
+       <contentpage jcr:primaryType="nt:unstructured">  
+       
+            <parContent
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Article,group:Content]" />
+                            
+        </contentpage>
+
+        <languagepage
+        	jcr:primaryType="nt:unstructured">
+        	<mainContent
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Homepage,group:List,,group:Content]" />
+
+            
+            <sidebarContent
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"
+                components="[group:Homepage,group:Content,group:Sidebar]" />  
+                
+        	<footPar
+           		jcr:primaryType="nt:unstructured"
+           		sling:resourceType="foundation/components/parsys"
+           		components="[group:FooterLayout]" />
+           	
+           	<footParNarrow
+           		jcr:primaryType="nt:unstructured"
+           		sling:resourceType="foundation/components/parsys"
+           		components="[group:FooterNarrow]" />
+           	
+           	<footParNarrow2
+           		jcr:primaryType="nt:unstructured"
+           		sling:resourceType="foundation/components/parsys"
+           		components="[group:FooterNarrow]" />
+           	
+           	<footParNarrow3
+           		jcr:primaryType="nt:unstructured"
+           		sling:resourceType="foundation/components/parsys"
+           		components="[group:FooterNarrow]" />
+           		
+            <footParWide
+           		jcr:primaryType="nt:unstructured"
+           		sling:resourceType="foundation/components/parsys"
+           		components="[group:FooterWide]" />	
+        </languagepage>
+
+    </jcr:content>
+
+    <clientlibs/>
+</jcr:root>

@@ -1,0 +1,19 @@
+<!-- Mobile App Banner -->
+<script src="/etc/designs/aemsp/clientlibs/js/jquery.smartbanner.js"></script>
+<script>
+  $(function() {
+	var appBannerDefaultTitle = "${'aemsp_mobileAppBannerTitle' @ i18n, context='html'}";
+	var appBannerDefaultAuthor = "${'aemsp_mobileAppBannerAuthor' @ i18n, context='html'}";
+	var appBannerDefaultPrice = "${'aemsp_mobileAppBannerPrice' @ i18n, context='html'}";
+    $.smartbanner({
+		  title: appBannerTitle ? appBannerTitle : appBannerDefaultTitle, // What the title of the app should be in the banner (defaults to <title>)
+		  author:  appBannerAuthor ? appBannerAuthor : appBannerDefaultAuthor, // What the author of the app should be in the banner (defaults to <meta name="author"> or hostname)
+		  price: appBannerPrice ? appBannerPrice : appBannerDefaultPrice, // Price of the app
+		  appStoreLanguage: "${'aemsp_mobileAppBannerAppStoreLanguage' @ i18n, context='html'}", // Language code for App Store
+		  inAppStore: "${'aemsp_mobileAppBannerInAppStore' @ i18n, context='html'}", // Text of price for iOS
+		  inGooglePlay: "${'aemsp_mobileAppBannerInGooglePlay' @ i18n, context='html'}", // Text of price for Android
+		  button: "${'aemsp_mobileAppBannerButton' @ i18n, context='html'}", // Text for the install button
+		  appendToSelector: '#header' //Append the banner to a specific selector
+	  });
+  });
+</script>

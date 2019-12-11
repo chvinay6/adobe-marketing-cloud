@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_category_nap
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_category_nap"
+		sling:message="Neuanträge"/>
+	
+	<aemsp_category_adj
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_category_adj"
+		sling:message="Ausgleiche"/>
+	
+	<aemsp_category_bnk
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_category_bnk"
+		sling:message="Konkurse"/>
+	
+	<aemsp_category_chg
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_category_chg"
+		sling:message="Änderungen"/>
+	
+	<aemsp_category_del
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_category_del"
+		sling:message="Löschungen"/>
+	
+	<aemsp_category_cre
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_category_cre"
+		sling:message="Gläubigeraufforderungen"/>
+	
+	<aemsp_tab_commentry
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_commentry"
+		sling:message="Branchendienst" />
+	
+	<aemsp_commentryPageName
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_commentryPageName"
+		sling:message="Branchendienst Seite" />
+	
+	<aemsp_commentry_date
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_commentry_date"
+		sling:message="Datum" />
+	
+	<aemsp_commentry_category
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_commentry_category"
+		sling:message="Rubrik"/>
+		
+	<aemsp_commentry_jurisdiction
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_commentry_jurisdiction"
+		sling:message="Gerichtsstand"/>
+			
+</jcr:root>

@@ -1,0 +1,7 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.navigation.breadcrumb.BreadcrumbComponentBean" data-sly-test="${componentBean.breadcrumb}" data-sly-unwrap>
+	<homepageText data-sly-test.homepage="${'aemsp_breadcrumbHomepage' @ i18n}" data-sly-unwrap></homepageText>
+	<ol class="breadcrumb" data-sly-list="${componentBean.breadcrumb}">
+		<li data-sly-test.activeItem="${itemList.last}" class="active">${itemList.first ? homepage : item.name}</li>
+		<li data-sly-test="${!activeItem}"><a href="${item.path @ context='uri'}.html">${itemList.first ? homepage : item.name}</a></li>
+	</ol>
+</div>

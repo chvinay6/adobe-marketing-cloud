@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    
+    <content jcr:primaryType="nt:unstructured"
+    	sling:resourceType="granite/ui/components/foundation/container">
+    	
+    	<items jcr:primaryType="nt:unstructured">
+    	
+		    <tabs jcr:primaryType="nt:unstructured"
+		    	sling:resourceType="granite/ui/components/foundation/container">
+		    	
+		 	   	<layout jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+					
+				<items jcr:primaryType="nt:unstructured">
+					
+					<basic jcr:primaryType="nt:unstructured">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                            margin="{Boolean}false"/>
+                        <items jcr:primaryType="nt:unstructured">
+                            <column jcr:primaryType="nt:unstructured">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title jcr:primaryType="nt:unstructured">
+                                        <items jcr:primaryType="nt:unstructured">
+                                        	<pagename
+						           				jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/form/select"
+												name="pageName"
+												fieldLabel="Language"
+												fieldDescription="aemsp_languageSelectDescription"
+												cq:showOnCreate="{Boolean}true"
+												cq:hideOnEdit="{Boolean}true"
+												required="{Boolean}true">
+												<datasource jcr:primaryType="nt:unstructured"
+													sling:resourceType="cq/gui/components/common/datasources/languages"
+													addNone="{Boolean}false"/>
+											</pagename>
+											<domain
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+												fieldLabel="aemsp_domain"
+												cq:showOnCreate="{Boolean}true"
+												name="./domain"
+												required="{Boolean}true" />				   		
+                                        </items>
+                                    </title>
+                                </items>
+                            </column>
+                        </items>
+                    </basic>
+
+					<chiefEditor jcr:primaryType="nt:unstructured"				
+						path="/apps/aemsp/components/page/languagepage/tab_article_approval"
+						sling:orderBefore="thumbnail"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+					
+					<votingModule jcr:primaryType="nt:unstructured"				
+						path="/apps/aemsp/components/page/languagepage/tab_voting_module"
+						sling:orderBefore="thumbnail"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+						
+					<banners jcr:primaryType="nt:unstructured"		
+						sling:orderBefore="thumbnail"		
+						path="/apps/aemsp/components/page/languagepage/tab_banners"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+					
+					<metanav jcr:primaryType="nt:unstructured"		
+						sling:orderBefore="thumbnail"		
+						path="/apps/aemsp/components/page/languagepage/tab_metanav"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+						
+					<contact jcr:primaryType="nt:unstructured"		
+						sling:orderBefore="thumbnail"		
+						path="/apps/aemsp/components/page/languagepage/tab_contact"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+									
+					<search jcr:primaryType="nt:unstructured"		
+						sling:orderBefore="thumbnail"		
+						path="/apps/aemsp/components/page/languagepage/tab_search"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+						
+					<icons jcr:primaryType="nt:unstructured"		
+						sling:orderBefore="thumbnail"		
+						path="/apps/aemsp/components/page/languagepage/tab_icons"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+    			</items>
+    		</tabs>
+    	</items>
+   	</content>
+</jcr:root>

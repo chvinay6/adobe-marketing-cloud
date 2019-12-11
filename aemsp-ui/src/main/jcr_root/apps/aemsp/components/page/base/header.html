@@ -1,0 +1,65 @@
+<header data-sly-use.headerBean="${'io.ecx.aem.aemsp.core.components.page.base.HeaderComponentBean'}" id="header" class="header affix-top ecx" data-spy="affix" data-offset-top="10" >
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<!-- Logo & Mobile Navigation Toggle Start -->
+			<div class="navbar-header">
+				<button id="mainNavMobileButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#mobileNavigation-collapse" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<div id="nav-icon">
+					  <span></span>
+					  <span></span>
+					  <span></span>
+					  <span></span>
+					</div>
+				</button>
+
+				<!-- This is a logo presented only for mobile breakpoints, other one is on line 27 -->
+				<a class="navbar-brand hidden-md hidden-lg" href="${headerBean.homePageLink}">
+					<img class="img-responsive" src="${headerBean.logoPath}" alt="" />
+				</a>
+			</div>
+			<!-- Logo & Mobile Navigation Toggle Stop -->
+
+			<!-- Main Navigation, Meta Navigation, Search form, Mobile Language bar Start -->
+			<div class="collapse navbar-collapse" id="mobileNavigation-collapse">
+
+				<a class="navbar-brand hidden-xs hidden-sm" href="${headerBean.homePageLink}">
+					<img class="img-responsive" src="${headerBean.logoPath}" alt="" />
+				</a>
+				<!-- Meta Navigation & Search Form Start -->
+				<div class="navbar-right">
+					<!-- Meta Navigation Start -->
+					<metanavigation  data-sly-use.requestheadermodel="${'io.ecx.aem.aemsp.core.slingmodels.RequestHeaderModel'}" data-sly-unwrap>
+						<ssi data-sly-test.ssiActive="${requestheadermodel.ssiActive}" data-sly-unwrap>
+							<!--#include virtual="${currentPage.path}.metanavigation.nocache.html" -->
+						</ssi>
+						<div data-sly-test ="${!ssiActive}" data-sly-resource="${'metanavigation' @ resourceType='aemsp/components/header/metanavigation'}" data-sly-unwrap></div>
+					</metanavigation>
+
+					<!-- Meta Navigation Stop -->
+					<!-- Search Form Start -->
+					<div data-sly-resource="${'searchform' @ resourceType='aemsp/components/header/searchform'}" data-sly-unwrap></div>
+					<!-- Search Form Stop -->
+				</div>
+				<!-- Meta Navigation & Search Form Stop -->
+				<div class="clearfix"></div>
+	
+				<mainnavigation  data-sly-resource="${'mainnavigation' @ resourceType='aemsp/components/navigation/mainnavigation'}" data-sly-unwrap></mainnavigation>
+	
+				<!-- Language bar for Mobile breakpoint only Start -->
+				<div data-sly-use.metaNavigationBean="io.ecx.aem.aemsp.core.components.header.metanavigation.MetaNavigationComponentBean" data-sly-unwrap>
+					<ul data-sly-test="${metaNavigationBean.multipleLanguages}" class="languageSwitcherMobile hidden-md hidden-lg">
+						<li class="languageSwitcherMobile_item active"><a href="${metaNavigationBean.currentHomeDomain}">${metaNavigationBean.currentLocalizedLanguageName}</a></li>
+						<div data-sly-list.langPage="${metaNavigationBean.otherLanguagePages}" data-sly-unwrap>
+							<li class="languageSwitcherMobile_item"><a href="${langPage.domain}">${langPage.localizedLanguageName}</a></li>
+						</div>
+					</ul>
+				</div>
+				<!-- Language bar for Mobile breakpoint only Stop -->
+	
+			</div>
+				<!-- Main Navigation, Meta Navigation, Search form, Mobile Language bar Stop -->
+		</nav>
+	</div>
+</header>

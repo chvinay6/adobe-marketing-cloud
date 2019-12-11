@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="de"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    
+    <aemsp_metanav
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_metanav"
+        sling:message="Meta-Navigation"/>
+    
+    <aemsp_metanav_abo
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_metanav_abo"
+        sling:message="Abonement"/>
+        
+    <aemsp_metanav_contact
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_metanav_contact"
+        sling:message="Kontakt"/>
+    
+    <aemsp_metanav_login
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_metanav_login"
+        sling:message="Login"/>
+        
+    <aemsp_metanav_hello
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_metanav_hello"
+        sling:message="Hallo"/>
+        
+    <aemsp_metanav_subslink
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_metanav_subslink"
+        sling:message="Link"/>
+        
+    <aemsp_metanav_substext
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_metanav_substext"
+        sling:message="Link Text"/>
+    
+    <aemsp_metanav_subsshow
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_metanav_subsshow"
+        sling:message="Abo Link Anzeigen"/>
+       
+</jcr:root>

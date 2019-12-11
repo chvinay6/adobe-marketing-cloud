@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="de"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <aemsp_rte
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rte"
+        sling:message="Rich-Text-Komponente"/>
+    
+  	<aemsp_rteImage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImage"
+        sling:message="Bild"/>
+        
+  	<aemsp_rteIncludeImage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteIncludeImage"
+        sling:message="Bild einbeziehen"/>
+       
+    <aemsp_rteImageUpload
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImageUpload"
+        sling:message="Bild laden"/>
+    
+    <aemsp_rteImageCaption
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImageCaption"
+        sling:message="Bildunterschrift"/>
+    
+    <aemsp_rteImageCopyright
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImageCopyright"
+        sling:message="Copyright"/>
+     
+    <aemsp_rteImagePosition
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImagePosition"
+        sling:message="Position"/>
+        
+    <aemsp_rteImagePosLeft
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImagePosLeft"
+        sling:message="Top-Links"/>
+        
+    <aemsp_rteImagePosRight
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImagePosRight"
+        sling:message="Top-Rechts"/>
+        
+    <aemsp_rteImagePosCenter
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImagePosCenter"
+        sling:message="Center"/>
+        
+    <aemsp_rteImageLink
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImageLink"
+        sling:message="Link"/>
+        
+    <aemsp_rteImageLinkDesc
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteImageLinkDesc"
+        sling:message="Wenn kein Link definiert ist, wird das Bild im Lightbox-Modus geöffnet"/>
+        
+    <aemsp_rteOptions
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteOptions"
+        sling:message="Einstellungen"/>
+        
+    <aemsp_rteHeadline
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteHeadline"
+        sling:message="Überschrift"/>
+        
+    <aemsp_rteHighlight
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteHighlight"
+        sling:message="Markieren"/>
+    
+    <aemsp_rteParagraph
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteParagraph"
+        sling:message="Paragraph"/>
+        
+    <aemsp_rteHeading3
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_rteHeading3"
+        sling:message="Überschrift (h3)"/>
+         
+</jcr:root>

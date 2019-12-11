@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	jcr:primaryType="nt:unstructured" 
+	jcr:title="Image Slider"
+	sling:resourceType="cq/gui/components/authoring/dialog">
+	<content 
+		jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/container">
+		<items 
+			jcr:primaryType="nt:unstructured">
+			<tabs 
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/container">
+				<layout 
+					jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+					type="nav" />
+				<items 
+					jcr:primaryType="nt:unstructured">
+					<list 
+						jcr:primaryType="nt:unstructured" 
+						jcr:title="aemsp_articlelistTabList"
+						sling:resourceType="granite/ui/components/foundation/section">
+						<layout 
+							jcr:primaryType="nt:unstructured" 
+							margin="false"
+							sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+						<items 
+							jcr:primaryType="nt:unstructured">
+							<column 
+								jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/foundation/container">
+								<items 
+									jcr:primaryType="nt:unstructured">
+									
+									<headline jcr:primaryType="nt:unstructured"
+										name="./headline"
+										fieldLabel="aemsp_ListTypeHeadline"
+										sling:resourceType="granite/ui/components/coral/foundation/form/textfield">			
+									</headline>
+									
+									<articleListType jcr:primaryType="nt:unstructured"
+					  					fieldLabel="aemsp_ListType"
+					  					name="./listType"
+					  					sling:resourceType="granite/ui/components/foundation/form/select">
+					  					
+					  					<items jcr:primaryType="nt:unstructured">
+					  					   <default
+				                                jcr:primaryType="nt:unstructured"
+				                                text=""
+				                                value=""/>
+				                            <articleList
+				                                jcr:primaryType="nt:unstructured"
+				                                text="aemsp_articleListType"
+				                                value="articleList"/> 
+				                            <commercialList
+				                                jcr:primaryType="nt:unstructured"
+				                                text="aemsp_commercialListType"
+				                                value="commercialList"/>
+				                            <offerList
+				                                jcr:primaryType="nt:unstructured"
+				                                text="aemsp_offerListType"
+				                                value="offerList"/>                                     
+				                        </items>
+					  				  </articleListType>
+	  				
+						              <articleListItemNumbers
+					                          jcr:primaryType="nt:unstructured"
+					                          sling:resourceType="granite/ui/components/foundation/container">
+					                          <items jcr:primaryType="nt:unstructured">
+								  				<aemsp_articleListNumber
+								           			jcr:primaryType="nt:unstructured"		           			
+													sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+													fieldLabel="aemsp_articleListNumber"
+													required="{Boolean}true"
+													min="{Long}1"
+													value="25"
+													name="./itemNumber" />
+												<aemsp_articlelistLoadMore
+								           			jcr:primaryType="nt:unstructured"		           			
+													sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+													fieldLabel="aemsp_articlelistLoadMore"
+													required="{Boolean}true"
+													value="5"
+													min="{Long}1"
+													name="./loadMoreNumber" />
+											  </items>
+										</articleListItemNumbers>
+								</items>
+							</column>
+						</items>
+					</list>
+					<filter 
+						jcr:primaryType="nt:unstructured" 
+						jcr:title="aemsp_articlelistFilterTab"
+						sling:resourceType="granite/ui/components/foundation/section">
+						<layout 
+							jcr:primaryType="nt:unstructured" 
+							margin="false"
+							sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+						<items 
+							jcr:primaryType="nt:unstructured">
+							<column 
+								jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/foundation/container">
+								<items 
+									jcr:primaryType="nt:unstructured">
+									<otherFieldset 
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/fieldset">
+										<layout 
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+										<items 
+											jcr:primaryType="nt:unstructured">
+											<filter jcr:primaryType="nt:unstructured"
+												name="./filters"
+												fieldLabel="Filter"
+												allowCreate="{Boolean}false"
+												allowBulkEdit="{Boolean}false"
+												sling:resourceType="cq/gui/components/common/tagspicker">			
+											</filter>
+										</items>
+									</otherFieldset>
+								</items>
+							</column>
+						</items>
+					</filter>
+				</items>
+			</tabs>
+		</items>
+	</content>
+</jcr:root>
+

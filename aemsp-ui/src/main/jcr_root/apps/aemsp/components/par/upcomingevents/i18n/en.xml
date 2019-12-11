@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="en"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_upcoming
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_upcoming"
+		sling:message="Upcoming Events Component"/>
+		
+	<aemsp_upcoming_title
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_upcoming_title"
+		sling:message="Upcoming events"/>
+		
+	<aemsp_upcoming_noevents
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_upcoming_noevents"
+		sling:message="There are no upcoming events"/>
+		
+	<aemsp_upcoming_max
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_upcoming_max"
+		sling:message="Number of events"/>
+	
+	<aemsp_upcoming_max_desc
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_upcoming_max_desc"
+		sling:message="Maximum number of events to show (default: 3)"/>
+		
+</jcr:root>

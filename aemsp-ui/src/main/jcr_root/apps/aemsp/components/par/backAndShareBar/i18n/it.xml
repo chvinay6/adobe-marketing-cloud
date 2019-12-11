@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="it"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+		
+	<aemsp_backButtonText
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_backButtonText"
+		sling:message="Indietro"/>
+		
+	<aemsp_article_share
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_share"
+		sling:message="condividere"/>
+	
+	<aemsp_article_tweet
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tweet"
+		sling:message="tweet"/>
+	
+	<aemsp_share_email
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_share_email"
+		sling:message="utente@esempio.it"/>
+	
+</jcr:root>

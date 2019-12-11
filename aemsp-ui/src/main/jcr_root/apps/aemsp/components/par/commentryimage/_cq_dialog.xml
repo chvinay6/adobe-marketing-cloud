@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="aemsp_commentryimageName"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content jcr:primaryType="nt:unstructured"
+    	sling:hideChildren="[layout]"
+    	class="coral-TabPanel-content"
+    	sling:resourceType="granite/ui/components/foundation/container">
+    	
+			<items jcr:primaryType="nt:unstructured"
+				sling:hideChildren="[column,articleimage,imageCaption,imageCopyright,imageAlt]">
+			
+				<commentryimage
+					jcr:primaryType="nt:unstructured"
+					autoStart="false"
+					text="aemsp_articleimage_upload"
+					class="cq-droptarget"
+					mimeTypes="[image]"
+					fieldLabel="aemsp_commentryimageName"
+					fileReferenceParameter="./fileReference"
+					multiple="false"
+					useHTML5="{Boolean}true"
+					uploadUrl="${suffix.path}"
+					fileNameParameter="./fileName"
+					name="./file"
+					sling:resourceType="granite/ui/components/foundation/form/fileupload"/>
+				
+				<commimageCaption
+					jcr:primaryType="nt:unstructured"
+			        fieldLabel="aemsp_articleimageCaption"
+			        name="./caption"
+			        sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+			    
+			    <commimageCopyright
+					jcr:primaryType="nt:unstructured"
+			        fieldLabel="aemsp_articleimageCopyright"
+			        name="./copyright"
+			        sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+							
+				<commimageAlt
+					jcr:primaryType="nt:unstructured"
+			        fieldLabel="aemsp_articleimageAlt"
+			        name="./imageAlt"
+			        sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+		        			
+			</items>
+		
+    </content>
+
+</jcr:root>

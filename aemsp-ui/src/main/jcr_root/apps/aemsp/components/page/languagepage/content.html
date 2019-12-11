@@ -1,0 +1,17 @@
+<div class="container">
+	<div class="wrapper">
+		<main role="main" id="main">
+		<div data-sly-test="${wcmmode.edit && pageProperties.appBannerActivated}" data-sly-unwrap>
+			<div data-sly-test="${!pageProperties.appleCode}" class="alert alert-danger" role="alert">${'aemsp_app_appleCodeNotConfiguredError' @ i18n}</div>
+			<div data-sly-test="${!pageProperties.googleCode}" class="alert alert-danger" role="alert">${'aemsp_app_googleCodeNotConfiguredError' @ i18n}</div>
+		</div>
+		<div data-sly-resource="${'mainContent' @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+		<div data-sly-resource="${'parFixed' @ resourceType='aemsp/components/par/lockedpar'}" data-sly-unwrap></div>
+		</main>
+		<aside role="sidebar" id="sidebar">
+			<div data-sly-resource="${'sidebarContent' @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+			<div data-sly-resource="${'parSidebarFixed' @ resourceType='aemsp/components/par/lockedpar'}" data-sly-unwrap></div>
+		</aside>
+	</div>
+</div>
+

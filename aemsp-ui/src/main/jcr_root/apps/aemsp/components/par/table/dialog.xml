@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    anchor="100%"
+    helpPath="en/cq/current/wcm/default_components.html#Table"
+    title="Table"
+    stateful="false"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <table
+        	jcr:primaryType="cq:Widget"
+        	hideLabel="{Boolean}true"
+        	name="./tableData"
+        	xtype="tableedit2">
+       	 	<rtePlugins jcr:primaryType="nt:unstructured">
+        		<format
+        			jcr:primaryType="nt:unstructured"
+        			features="[bold,underline]" />
+        		<lists
+        			jcr:primaryType="nt:unstructured"
+        			features="[indent,outdent]"/>
+        		<table
+        			jcr:primaryType="nt:unstructured"
+        			features="*">
+        		</table>
+        	</rtePlugins>
+        </table>
+        
+    </items>
+</jcr:root>

@@ -1,0 +1,8 @@
+<div data-sly-use.componentBean="${'io.ecx.aem.aemsp.core.components.par.image.ImageComponentBean' @servletSelector='fitIn',renditionSelector='articleimage',fileExtension='*'}" data-sly-unwrap>
+	<div data-sly-use.ext="/apps/aemsp/components/par/articleimage/picture.html" data-sly-test.hasImage="${componentBean.image && componentBean.image.path}" data-sly-unwrap></div>
+	<div data-sly-call="${ext.picture @ componentBean=componentBean}" data-sly-unwrap></div>
+	<div data-sly-test="${!hasImage && (wcmmode.edit || wcmmode.preview)}" class="cq-dd-image author_image_drop_placeholder">
+		<div class="author_image_placeholder"></div>
+	</div>
+</div>
+

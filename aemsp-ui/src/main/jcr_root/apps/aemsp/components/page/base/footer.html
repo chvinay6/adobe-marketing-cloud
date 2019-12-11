@@ -1,0 +1,26 @@
+<footer id="footer" role="contentinfo" class="ecx">
+	<div class="container">
+
+		<div class="to-top">
+			<a href="javascript:void(0)" title="Zum Anfang der Seite">
+				<span class="av av-chevron-up" aria-hidden="true"></span>
+				<span class="sr-only">Zum Anfang der Seite</span>
+			</a>
+		</div>
+		
+		<breadcrumb  data-sly-resource="${'breadcrumb' @ resourceType='aemsp/components/navigation/breadcrumb'}" data-sly-unwrap></breadcrumb>
+
+		<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.footer.FooterComponentBean" class="module module-footerNavigation">
+			<div>
+				<div data-sly-resource="${@ path=componentBean.footParPath,wcmmode='disabled',resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+			</div>
+		</div>
+		
+		<div data-sly-include="contact.html" data-sly-unwrap></div>
+		
+		<div data-sly-include="login.html" data-sly-unwrap></div>
+		
+		<p class="text-center">&copy; ecx.io online training, 2017</p>
+
+	</div>
+</footer>

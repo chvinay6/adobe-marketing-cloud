@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="en"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+					
+	<aemsp_mostRead
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_mostRead"
+		sling:message="Most read articles"/>
+		
+	<aemsp_mostReadHeadlineLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_mostReadHeadlineLabel"
+		sling:message="Headline"/>
+		
+	<aemsp_mostReadMaxNumberLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_mostReadMaxNumberLabel"
+		sling:message="Number"/>
+		
+	<aemsp_languageCode
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_languageCode"
+		sling:message="en"/>
+		
+	<aemsp_languageCodeLong
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_languageCodeLong"
+		sling:message="en_GB"/>
+		
+		
+	<aemsp_mostRead_oopsError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_mostRead_oopsError"
+		sling:message="Ooops, unfortunately we did not find anything here"/>
+		
+	<aemsp_mostRead_notFoundError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_mostRead_notFoundError"
+		sling:message="Your search request did not get any results. Please submit a new search request."/>
+		
+</jcr:root>

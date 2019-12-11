@@ -1,0 +1,14 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.mostread.MostReadComponentBean" data-sly-unwrap>
+	<div data-sly-test="${!properties.headline}" class="cq-placeholder" data-emptytext="${'aemsp_mostRead' @ i18n}"></div>
+
+	<div class="component component-mostreadArticles">
+
+		<h3 data-sly-test="${properties.headline}">${properties.headline}</h3>
+
+		<div id="mostReadArticles" class="search pageList init" data-pageSize="${componentBean.maxItems}" data-searchurl="/servlets/mostread.json" data-sitepath="${resource.path}" data-language="${'aemsp_languageCodeLong' @i18n, context='html'}"
+			data-country="${'aemsp_languageCode' @i18n, context='html'}" data-searchType="auto" data-updateUrl="false" data-debug="true"></div>
+
+		<script id='mostReadArticles-ractive' class="search pageList ractive" type='text/ractive' data-sly-include="ractive.html"></script>
+
+	</div>
+</div>

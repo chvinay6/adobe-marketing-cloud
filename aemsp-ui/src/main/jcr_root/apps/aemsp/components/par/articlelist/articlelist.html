@@ -1,0 +1,20 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.list.ListComponentBean"
+     data-sly-test="!${properties.headline}" class="cq-placeholder" data-emptytext="${'aemsp_articleListType' @ i18n}"></div>
+<div data-sly-test="${properties.headline}" class="module module-content">
+    <h2>${properties.headline}</h2>
+</div>
+
+<div data-sly-test="${componentBean.validList}" id="allTeaser" class="search pageList init"
+  data-firstPageSize="${componentBean.maxItems}"
+  data-pageSize="${componentBean.maxItems}"
+  data-loadMoreSize="${componentBean.loadMore}"
+  data-searchurl="/servlets/listcomponent.json"
+  data-sitepath="${resource.path}"
+  data-language="de-DE" data-country="de"
+  data-searchType="static"
+  data-updateUrl="false"
+  data-debug="true"
+  data-firstData="${componentBean.listJson}">
+</div>
+ 
+<script id='allTeaser-ractive' class="search pageList ractive" type='text/ractive' data-sly-include="ractive.html"></script>

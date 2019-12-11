@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_votingmodulePageName
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_votingmodulePageName"
+		sling:message="Voting Modul Seite"/>
+
+	<aemsp_tab_voting_module
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_voting_module"
+		sling:message="Voting Modul"/>
+		
+	<aemsp_tab_general_text
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_general_text"
+		sling:message="Texte"/>
+
+	<aemsp_voting_module_headline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_headline"
+		sling:message="Titel"/>
+		
+	<aemsp_voting_module_submit
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_submit"
+		sling:message="Abstimmen Button"/>
+
+	<aemsp_voting_module_submit_text
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_submit_text"
+		sling:message="Abstimmen"/>
+		
+	<aemsp_voting_module_thankyou_message
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_thankyou_message"
+		sling:message="Voting Modul"/>
+		
+	<aemsp_voting_module_type
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_type"
+		sling:message="Typ"/>
+		
+	<aemsp_voting_module_type_radio
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_type_radio"
+		sling:message="Einzelwahl"/>
+
+	<aemsp_voting_module_type_checkbox
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_type_checkbox"
+		sling:message="Mehrfachauswahl"/>
+
+	<aemsp_voting_module_question
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_question"
+		sling:message="Frage"/>
+
+	<aemsp_voting_module_answers
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_answers"
+		sling:message="Antworte *"/>
+
+	<aemsp_voting_module_answer
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_answer"
+		sling:message="Antwort"/>
+	
+	<aemsp_voting_module_answer_selected
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_answer_selected"
+		sling:message="Ausgewählt"/>
+	
+	<aemsp_voting_module_thankyou_message
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_thankyou_message"
+		sling:message="Response Text"/>
+	
+	<aemsp_voting_module_thankyou_message_text
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_thankyou_message_text"
+		sling:message="Danke für Ihre Teilnahme"/>
+
+	<aemsp_voting_module_path
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_path"
+		sling:message="Voting Modul Pfad"/>	
+
+	<aemsp_voting_module_csv_export_text
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_voting_module_csv_export_text"
+		sling:message="Voting Modul CSV Export"/>	
+	
+	<aemsp_votingModuleSetupMessage
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_votingModuleSetupMessage"
+		sling:message="Voting Modul ist nicht konfiguriert auf der Startseite."/>	
+		
+	<aemsp_votingModuleMinQuestionMessage
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_votingModuleMinQuestionMessage"
+		sling:message="Mindestens 2 Antworte müssen gesetzt werden"/>		
+		
+						
+		
+</jcr:root>

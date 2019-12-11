@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_tab_placement
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_placement"
+		sling:message="Komponent Platzierung"/>
+		
+	<aemsp_backshare_headline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_backshare_headline"
+		sling:message="Zurück/Teilen Modul" />
+		
+	<aemsp_backshare_position
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_backshare_position"
+		sling:message="Platzierung"/>
+	
+	<aemsp_backshare_afterImage
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_backshare_afterImage"
+		sling:message="Nach Artikelbild"/>
+	
+	<aemsp_backshare_afterMeta
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_backshare_afterMeta"
+		sling:message="Nach Meta-Info"/>
+	
+	<aemsp_backshare_afterTeaser
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_backshare_afterTeaser"
+		sling:message="Nach Teaser"/>
+	
+	<aemsp_backshare_none
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_backshare_none"
+		sling:message="Kein Back/Share Module"/>
+	
+	<aemsp_magazinPageName
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_magazinePageName"
+		sling:message="Magazin Seite"/>
+	
+	
+	<aemsp_tab_rss
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_rss"
+		sling:message="RSS Feed"/>
+
+	<aemsp_rss_headline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_rss_headline"
+		sling:message="RSS Feed"/>
+	
+	<aemsp_rssTitle
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_rssTitle"
+		sling:message="Titel"/>
+
+	<aemsp_rssDescription
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_rssDescription"
+		sling:message="Beschreibung"/>
+
+	<aemsp_rssArticleNumber
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_rssArticleNumber"
+		sling:message="Max Artikel Nummer"/>
+	
+		
+</jcr:root>
+

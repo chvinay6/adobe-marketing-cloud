@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	jcr:description="" 
+	jcr:primaryType="cq:Template" 
+	jcr:title="aemsp_calendarPageName"
+	allowedPaths="/content/(.*)"
+	allowedParents="[/apps/aemsp/templates/languagepage,/apps/aemsp/templates/categorypage,/apps/aemsp/templates/grouppage]"
+	allowedChildren="[/apps/aemsp/templates/eventpage]"
+	ranking="{Long}5">
+	<jcr:content jcr:primaryType="cq:PageContent"
+		cq:designPath="/etc/designs/aemsp"
+		sling:resourceType="aemsp/components/page/calendarpage">
+	</jcr:content>
+</jcr:root>

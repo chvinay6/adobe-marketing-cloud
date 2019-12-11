@@ -1,0 +1,82 @@
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured"
+	jcr:title="aemsp_metanav" sling:resourceType="granite/ui/components/foundation/container"
+	cq:showOnCreate="{Boolean}false">
+
+	<items jcr:primaryType="nt:unstructured">
+
+		<general jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/section">
+
+			<layout jcr:primaryType="nt:unstructured" 
+				margin="{Boolean}false"
+				sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+			<items jcr:primaryType="nt:unstructured">
+				<column jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/container">
+
+					<items jcr:primaryType="nt:unstructured">
+						<aboOpts jcr:primaryType="nt:unstructured" 
+							jcr:title="aemsp_metanav_abo"
+							sling:resourceType="granite/ui/components/foundation/form/fieldset">
+								<items jcr:primaryType="nt:unstructured">
+									<showAbo jcr:primaryType="nt:unstructured"
+										text="aemsp_metanav_subsshow"
+										sling:resourceType="granite/ui/components/foundation/form/checkbox"
+										id="showAbo" 
+										value="{Boolean}true" 
+										name="./subscriptionShown"
+										class="cq-dialog-checkbox-showhide" 
+										showhide-target=".enable-showhide-target-abo" />
+									<showAboContainer
+										jcr:primaryType="nt:unstructured" 
+										sling:resourceType="granite/ui/components/foundation/container"
+										class="enable-showhide-target-abo"
+										showhide-target-value="true">
+										<items jcr:primaryType="nt:unstructured">
+											<subslink jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+												fieldLabel="aemsp_metanav_subslink"
+												name="./subscriptionLink"/>
+											<substext jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+												fieldLabel="aemsp_metanav_substext"
+												name="./subscriptionText"/>
+										</items>
+									</showAboContainer>
+								</items>
+						</aboOpts>
+						<loginHeadline jcr:primaryType="nt:unstructured"
+							jcr:title="aemsp_tab_article_data_loginHeadline" sling:resourceType="granite/ui/components/foundation/form/fieldset">
+							<items jcr:primaryType="nt:unstructured">
+								<forgotText jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="aemsp_languagePageLoginForgotTextLabel" cq:showOnCreate="{Boolean}true"
+									name="./forgotText" emptyText="aemsp_login_forgotpassword" />
+									
+								<forgotLink jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="aemsp_languagePageLoginForgotLinkLabel" cq:showOnCreate="{Boolean}true"
+									name="./forgotLink" />
+									
+								<registerText jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="aemsp_languagePageLoginRegisterTextLabel" cq:showOnCreate="{Boolean}true"
+									name="./registerText" emptyText="aemsp_login_register"/>
+									
+								<registerLink jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+									fieldLabel="aemsp_languagePageLoginRegisterLinkLabel" cq:showOnCreate="{Boolean}true"
+									name="./registerLink" />
+
+							</items>
+						</loginHeadline>
+					</items>
+				</column>
+			</items>
+		</general>
+
+	</items>
+
+</jcr:root>

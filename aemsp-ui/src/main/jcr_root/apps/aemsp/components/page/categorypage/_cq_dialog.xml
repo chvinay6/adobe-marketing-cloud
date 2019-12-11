@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    
+    <content jcr:primaryType="nt:unstructured"
+    	sling:resourceType="granite/ui/components/foundation/container">
+    	
+    	<items jcr:primaryType="nt:unstructured">
+    	
+		    <tabs jcr:primaryType="nt:unstructured"
+		    	sling:resourceType="granite/ui/components/foundation/container">
+		    	
+		 	   	<layout jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+					
+				<items jcr:primaryType="nt:unstructured">
+					
+					<chiefEditor jcr:primaryType="nt:unstructured"				
+						path="/apps/aemsp/components/page/base/tab_article_approval"
+						sling:orderBefore="thumbnail"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+													
+				</items>
+	    	</tabs>    	
+    	</items>
+   	</content>
+</jcr:root>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="aemsp_footer_narrow"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content 
+    	jcr:primaryType="nt:unstructured"
+    	sling:resourceType="granite/ui/components/foundation/container">
+    	<items 
+    		jcr:primaryType="nt:unstructured">
+   				<tabs
+   					jcr:primaryType="nt:unstructured"
+   					sling:resourceType="granite/ui/components/foundation/container">
+   					<layout
+   						jcr:primaryType="nt:unstructured"
+   						sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+   						type="nav" />
+					<items
+						jcr:primaryType="nt:unstructured">
+						
+						<headline
+							jcr:primaryType="nt:unstructured"
+							path="/apps/aemsp/components/footer/components/footer_narrow/tab_headline"
+							sling:resourceType="granite/ui/components/foundation/include"/>
+						
+						<tab1
+							jcr:primaryType="nt:unstructured"
+							jcr:title="aemsp_footer_column1"
+							sling:resourceType="granite/ui/components/foundation/section">
+							<layout
+								jcr:primaryType="nt:unstructured"
+								margin="false"
+								sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+							<items
+								jcr:primaryType="nt:unstructured">
+								<column
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container">
+									
+									<items
+										jcr:primaryType="nt:unstructured">
+										
+										<links
+											jcr:primaryType="nt:unstructured"
+											fieldLabel="aemsp_footer_links"
+											fieldDescription="aemsp_footer_mf_description"
+											sling:resourceType="granite/ui/components/foundation/form/multifield"
+											eaem-nested="">
+											<field 
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/form/fieldset"
+												name="./links1">
+												<layout 
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+												<items
+													jcr:primaryType="nt:unstructured">
+												<links jcr:primaryType="nt:unstructured"
+													path="/apps/aemsp/components/footer/components/footer_narrow/tab_links"
+													sling:resourceType="granite/ui/components/foundation/include"/>
+													</items>
+											</field>
+										</links>
+										<hidden
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"
+													name="./links1/doNotDelete"
+													required="{Boolean}true"
+													renderHidden="{Boolean}true"
+													value=" " />
+									</items>
+								</column>
+							</items>
+						</tab1>
+						<tab2
+							jcr:primaryType="nt:unstructured"
+							jcr:title="aemsp_footer_column2"
+							sling:resourceType="granite/ui/components/foundation/section">
+							<layout
+								jcr:primaryType="nt:unstructured"
+								margin="false"
+								sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+							<items
+								jcr:primaryType="nt:unstructured">
+								<column
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container">
+									
+									<items
+										jcr:primaryType="nt:unstructured">
+										
+										<links
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/multifield"
+											fieldLabel="aemsp_footer_links"
+											fieldDescription="aemsp_footer_mf_description"
+											eaem-nested="">
+											<field 
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/form/fieldset"
+												name="./links2">
+												<layout 
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+												<items
+													jcr:primaryType="nt:unstructured">
+												<links jcr:primaryType="nt:unstructured"
+													path="/apps/aemsp/components/footer/components/footer_narrow/tab_links"
+													sling:resourceType="granite/ui/components/foundation/include"/>
+													</items>
+    												
+											</field>
+										</links> 
+										<hidden
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"
+													name="./links2/doNotDelete"
+													required="{Boolean}true"
+													renderHidden="{Boolean}true"
+													value=" " />
+									</items>
+								</column>
+							</items>
+						</tab2>
+					</items>
+				</tabs>
+    	</items>
+    </content>
+
+</jcr:root>

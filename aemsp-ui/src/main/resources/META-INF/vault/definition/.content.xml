@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:created="{Date}2014-05-22T17:15:02.938+02:00"
+    jcr:createdBy="${project.parent.organization.name}"
+    jcr:description="${project.parent.description}"
+    jcr:lastModified="{Date}2014-05-22T17:15:02.938+02:00"
+    jcr:lastModifiedBy="${project.parent.organization.name}"
+    jcr:primaryType="vlt:PackageDefinition"
+    buildCount="1"
+    builtWith="Adobe AEM"
+    group="${cq-group}"
+    lastUnwrapped="{Date}2014-05-22T17:15:02.938+02:00"
+    lastUnwrappedBy="${project.parent.organization.name}"
+    lastWrapped="{Date}2014-05-22T17:15:02.938+02:00"
+    lastWrappedBy="${project.parent.organization.name}"
+    name="aemsp"
+    version="${project.version}">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/apps/aemsp"
+            rules="[]"/>
+        <f1
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/etc/designs/aemsp"
+            rules="[]"/>
+        <f2
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/etc/ecx.io/renditions/aemsp"
+            rules="[]"/>
+    </filter>
+    <thumbnail jcr:primaryType="nt:unstructured">
+        <file/>
+    </thumbnail>
+    <thumbnail.png/>
+</jcr:root>

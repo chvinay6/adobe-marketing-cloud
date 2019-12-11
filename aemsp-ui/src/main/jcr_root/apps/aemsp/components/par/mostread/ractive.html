@@ -1,0 +1,48 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.mostread.MostReadComponentBean" data-sly-unwrap></div>
+{{#if searchresult}} {{#with searchresult}}
+<div class="results" id="mostReadArticles-results">
+	{{#if numberOfHits == 0}}
+	<div class="items">
+		<div class="module module-content" intro='fade:400'>
+			<h3>${'aemsp_mostRead_oopsError' @i18n}</h3>
+			<p>${'aemsp_mostRead_notFoundError' @i18n}</p>
+		</div>
+	</div>
+	{{else}} {{#if results}}
+	<div class="items">
+		{{#each results:i}}
+		<div class="module module-imageTeaser" intro='fade:500' data-timestamp="{{timestamp}}">
+			<figure class="hidden-xs">
+				<a href="{{link}}">
+					<picture>
+					<source srcset="{{image[0]}}" media="(min-width: 1280px)">
+					<source srcset="{{image[1]}}" media="(min-width: 992px) and (max-width: 1279px)">
+					<source srcset="{{image[2]}}" media="(min-width: 768px) and (max-width: 991px)">
+					<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" srcset="{{image[2]}}" alt="{{image[3]}}"> </picture>
+				</a>
+			</figure>
+			<div class="head">
+				{{#if topline}}
+				<span class="prefix border">
+					<a href="{{link}}">
+						{{topline}}
+						<div class="tag-wrapper">
+							{{#if toparticle}}
+							<breakingDefaultText data-sly-test.breakingDefaultText="${'aemsp_articlePrefixTopArticle' @ i18n}" data-sly-unwrap></breakingDefaultText>
+							<span class="tag">${componentBean.breakingNewsText ? componentBean.breakingNewsText  : breakingDefaultText}</span>
+							{{/if}}
+						</div>
+					</a>
+				</span>
+				{{/if}}
+				<h3>
+					<a href="{{link}}">{{headline}}</a>
+				</h3>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+	{{/if}} {{/if}}
+</div>
+
+{{/with}} {{/if}}

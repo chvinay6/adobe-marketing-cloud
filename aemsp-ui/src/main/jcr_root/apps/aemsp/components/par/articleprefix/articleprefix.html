@@ -1,0 +1,6 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.page.articlepage.ArticlePageComponentBean"
+     data-sly-test="${!properties.text} "class="cq-placeholder" data-emptytext="${'aemsp_articlePrefix' @ i18n}"></div>
+<span class="prefix border">${properties.text}
+	<breakingDefaultText data-sly-test.breakingDefaultText="${'aemsp_articlePrefixTopArticle' @ i18n}" data-sly-unwrap></breakingDefaultText>
+	<div class="tag-wrapper"><span data-sly-test="${componentBean.breakingNews}" class="tag">${componentBean.breakingNewsText ? componentBean.breakingNewsText : breakingDefaultText}</span></div>
+</span>

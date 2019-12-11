@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="en"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_commentry_prefix
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_commentry_prefix"
+		sling:message="Company Region"/>
+	
+	<aemsp_commentry_prefix_text
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_commentry_prefix_text"
+		sling:message="Region"/>
+		
+	<aemsp_region_ooe
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_ooe"
+		sling:message="Upper Austria" />
+	
+	<aemsp_region_noe
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_noe"
+		sling:message="Lower Austria" />
+	
+	<aemsp_region_wie
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_wie"
+		sling:message="Vienna" />
+	
+	<aemsp_region_bur
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_bur"
+		sling:message="Burgenland" />
+	
+	<aemsp_region_kae
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_kae"
+		sling:message="Carinthia" />
+	
+	<aemsp_region_tir
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_tir"
+		sling:message="Tyrol" />
+	
+	<aemsp_region_ste
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_ste"
+		sling:message="Styria" />
+	
+	<aemsp_region_sab
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_sab"
+		sling:message="Salzburg" />
+	
+	<aemsp_region_vor
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_vor"
+		sling:message="Vorarlberg" />
+	
+	<aemsp_region_deu
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_deu"
+		sling:message="Germany" />
+		
+	<aemsp_region_other
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_region_other"
+		sling:message="Other" />
+	
+</jcr:root>

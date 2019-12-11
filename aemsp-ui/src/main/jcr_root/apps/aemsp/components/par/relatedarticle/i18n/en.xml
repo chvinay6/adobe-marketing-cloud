@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <aemsp_relatedArticleHeadline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_relatedArticleHeadline"
+		sling:message="Read on..."/>
+		
+  	<aemsp_relatedArticleName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleName"
+        sling:message="Related Articles"/>
+             
+  	<aemsp_relatedArticleNumberFieldLabel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleNumberFieldLabel"
+        sling:message="Limit"/>
+
+  	<aemsp_relatedArticleNumberFieldDescription
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleNumberFieldDescription"
+        sling:message="Maximum number of related Articles in this component"/>
+
+  	<aemsp_relatedArticleMultifieldLabel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleMultifieldLabel"
+        sling:message="Articles"/>
+        
+  	<aemsp_relatedArticleMultifieldDescription
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleMultifieldDescription"
+        sling:message="Manually set related articles. Leave pathfields empty if you want the related articles to be automatically filled up to the limit."/>   
+ 
+ 	<aemsp_relatedArticlesNotValidPreError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_relatedArticlesNotValidPreError"
+		sling:message="Not all paths that you selected meet the requirements: "/>
+		
+ 	<aemsp_articleNotValidCurrentArticleError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidCurrentArticleError"
+		sling:message="The selected article must not be the current Article "/>
+		
+ 	<aemsp_articleNotValidLanguageError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidLanguageError"
+		sling:message="The selected article has to be chosen from the same language this component is placed on "/>
+		
+	<aemsp_articleNotValidTypeError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidTypeError"
+		sling:message="The selection has to be an article page "/>
+		
+	<aemsp_articleNotValidPublishError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidPublishError"
+		sling:message="The selection has to be an article, which has already been published "/>
+		
+	<aemsp_readMore
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_readMore"
+		sling:message="Read more"/>
+       
+</jcr:root>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de" jcr:mixinTypes="[mix:language]" jcr:primaryType="sling:Folder">
+	<aemsp_tab_banners jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_banners" sling:message="Banner" />
+
+	<aemsp_languagePageName
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageName"
+		sling:message="Startseite" />
+	
+	<aemsp_domain
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_domain"
+		sling:message="Domain" />
+
+	<aemsp_languageSelectDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languageSelectDescription"
+		sling:message="Der Language-Code der gewählten Sprache wird in der Url verwendet" />
+
+	<aemsp_tab_article_data
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_tab_article_data"
+		sling:message="Homepage Einstellungen" />
+
+	<aemsp_languageTranslationsName
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languageTranslationsName"
+		sling:message="Übersetzungen" />
+
+	<aemsp_tab_article_data_loginHeadline
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_tab_article_data_loginHeadline"
+		sling:message="Login Einstellungen" />
+
+	<aemsp_languagePageLoginForgotTextLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageLoginForgotTextLabel"
+		sling:message='"Passwort vergessen"-Text' />
+
+	<aemsp_languagePageLoginForgotLinkLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageLoginForgotLinkLabel"
+		sling:message='"Passwort vergessen"-Link' />
+
+	<aemsp_languagePageLoginRegisterTextLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageLoginRegisterTextLabel"
+		sling:message='"Registrieren"-Text' />
+
+	<aemsp_languagePageLoginRegisterLinkLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageLoginRegisterLinkLabel"
+		sling:message='"Registrieren"-Link' />
+
+	<aemsp_languageTranslationsName
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languageTranslationsName"
+		sling:message="Übersetzungen" />
+
+	<aemsp_articleChiefEditorDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_articleChiefEditorDescription"
+		sling:message="Benutzergruppe für den Artikel Genehmigung Workflow" />
+	<aemsp_languageTranslationsTitle
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languageTranslationsTitle"
+		sling:message="Übersetzungen" />
+
+	<aemsp_breakingNewsLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_breakingNewsLabel"
+		sling:message="Top-Artikel Text" />
+
+	<aemsp_breakingNewsDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_breakingNewsDescription"
+		sling:message="Dieser Text wird in Artikeln angezeigt, die als Top-Artikel markiert sind" />
+
+	<aemsp_googleAnalyticsLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_googleAnalyticsLabel"
+		sling:message="Google Analytics ID" />
+
+	<aemsp_logoLabel jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_logoLabel" sling:message='Logo' />
+
+	<aemsp_logoDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_logoDescription"
+		sling:message='Wählen Sie eine Bilddatei aus dem DAM' />
+
+	<aemsp_faviconDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_faviconDescription"
+		sling:message='Wählen Sie ein Bild mit dem Dateityp ".ico"' />
+
+	<aemsp_touchiconDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_touchiconDescription"
+		sling:message='Wählen Sie ein Bild mit dem Dateityp ".png"' />
+
+	<aemsp_browser_headline
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_headline"
+		sling:message="Browser Information" />
+
+	<aemsp_cookie_headline
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_headline"
+		sling:message="Cookie Information" />
+
+	<aemsp_app_headline jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_app_headline" sling:message="Smartphone App Information" />
+
+	<aemsp_enable jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_enable" sling:message="Aktivieren" />
+
+	<aemsp_userinfo_headline
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_userinfo_headline"
+		sling:message="Überschrift" />
+
+	<aemsp_userinfo_text jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_userinfo_text" sling:message="Text" />
+
+	<aemsp_userinfo_cookie_enable
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_userinfo_cookie_enable"
+		sling:message="Show Cookie Information Link" />
+
+	<aemsp_userinfo_link jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_userinfo_link" sling:message="Link" />
+
+	<aemsp_userinfo_linkText
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_userinfo_linkText"
+		sling:message="Link Text" />
+
+	<aemsp_userinfo_buttonText
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_userinfo_buttonText"
+		sling:message="Knopf Text" />
+
+	<aemsp_browser_text_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_text_default"
+		sling:message="Diese Website ist für Firefox, Chrome und Safari optimiert." />
+
+	<aemsp_browser_link_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_link_default"
+		sling:message="&#35;" />
+
+	<aemsp_browser_linkText_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_linkText_default"
+		sling:message="Mehr über unterstützte Browser" />
+
+	<aemsp_browser_buttonText_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_buttonText_default"
+		sling:message="Ausblenden" />
+
+	<aemsp_cookie_text_headline_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_text_headline_default"
+		sling:message="Diese Webseite verwendet Cookies" />
+
+	<aemsp_cookie_text_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_text_default"
+		sling:message="Cookies helfen uns bei der Bereitstellung unserer Webseiten. Durch die Nutzung unserer Webseiten erklären Sie sich damit einverstanden, dass wir Cookies setzen." />
+
+	<aemsp_cookie_link_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_link_default"
+		sling:message="&#35;" />
+
+	<aemsp_cookie_linkText_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_linkText_default"
+		sling:message="Mehr über Cookies erfahren Sie hier" />
+
+	<aemsp_cookie_buttonText_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_buttonText_default"
+		sling:message="OK" />
+
+	<aemsp_app_title_label
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_title_label"
+		sling:message="Titel" />
+
+	<aemsp_app_author_label
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_author_label"
+		sling:message="Autor" />
+
+	<aemsp_app_price_label
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_price_label"
+		sling:message="Preis" />
+
+	<aemsp_app_appleCode jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_app_appleCode" sling:message="Apple Code" />
+
+	<aemsp_app_googleCode jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_app_googleCode" sling:message="Google Code" />
+
+	<aemsp_app_appleCodeNotConfiguredError
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_appleCodeNotConfiguredError"
+		sling:message='Der Apple-Code für das Mobile-App-Banner wurde nicht konfiguriert. Bitte setzen Sie den Apple-Code unter den Seitenkonfigurationen im Tab "Banners" oder deaktivieren Sie das Mobile-App-Banner für diese Sprache' />
+
+	<aemsp_app_googleCodeNotConfiguredError
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_googleCodeNotConfiguredError"
+		sling:message='Der Google-Code für das Mobile-App-Banner wurde nicht konfiguriert. Bitte setzen Sie den Google-Code unter den Seitenkonfigurationen im Tab "Banners" oder deaktivieren Sie das Mobile-App-Banner für diese Sprache' />
+
+	<aemsp_validationDefaultError
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_validationDefaultError"
+		sling:message="Der Wert des Feldes entspricht nicht den Anforderungen!" />
+
+
+</jcr:root>
+

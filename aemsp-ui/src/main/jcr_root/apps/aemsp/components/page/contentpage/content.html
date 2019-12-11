@@ -1,0 +1,11 @@
+<div class="container">
+	<div class="wrapper">
+		<main role="main" id="main">
+			<h1>${properties.headline ? properties.headline : properties.jcr:title}</h1>
+			<div data-sly-resource="${'parContent' @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+		</main>
+		<aside role="sidebar" id="sidebar">
+			<div data-sly-resource="${'parSidebar' @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+		</aside>
+	</div>
+</div>

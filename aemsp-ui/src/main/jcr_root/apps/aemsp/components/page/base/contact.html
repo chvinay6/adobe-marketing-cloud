@@ -1,0 +1,83 @@
+<!-- FancyboxContact Start -->
+<div class="ecx" data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.page.base.BasePageComponentBean">
+	<div id="contact" style=" display: none;">
+
+		<!-- FancyboxContactForm Start -->
+		<div class="modalForm">
+
+			<div class="headlines">
+
+				<h3><span class="oeav oeav-users"></span>${'aemsp_contact_headline' @ i18n}</h3>
+
+				<p>${'aemsp_contact_subline' @ i18n}</p>
+
+			</div>
+
+			<div class="module form">
+
+				<div class="contentForm">
+
+					<form id="contactModalForm" action="${componentBean.contactURL}" method="post" data-parsley-validate="">
+
+						<div class="form-group textItem">
+							<input class="form-control" type="text" id="contact-name" name="name" value="" data-parsley-maxlength="50" placeholder="${'aemsp_contact_placeholder_name' @ i18n}" required>
+						</div>
+
+						<div class="form-group textItem">
+							<input class="form-control" type="email" id="contact-email" name="email" value=""  placeholder="${'aemsp_contact_placeholder_mail' @ i18n}" data-parsley-error-message="${'aemsp_contact_mail_error' @ i18n}" data-parsley-trigger="change" required>
+						</div>
+
+						<div class="form-group textareaItem">
+							<textarea class="form-control" id="contact-message" name="message" value="" data-parsley-maxlength="1000" placeholder="${'aemsp_contact_placeholder_message' @ i18n}" required></textarea>
+						</div>
+
+						<div class="form-group formButtons">
+							<button class="btn btn-submit" type="submit">${'aemsp_contact_submit' @ i18n}</button>
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- FancyboxContactForm End -->
+
+		<!-- Fancybox ThankYou Message Start -->
+		<div class="modalFormSubmitted" style="display: none;">
+
+			<div class="headlines">
+
+				<h3><span class="oeav oeav-users"></span>${'aemsp_contact_thankyou' @ i18n}</h3>
+
+				<p>${'aemsp_contact_requestsent' @ i18n}</p>
+
+				<p>${'aemsp_contact_team' @ i18n}</p>
+
+			</div>
+
+		</div>
+		<!-- Fancybox ThankYou Message End -->
+		
+		<!-- Fancybox Error Message Start -->
+		<div class="modalFormError" style="display: none;">
+
+			<div class="headlines">
+
+				<h3><span class="oeav oeav-users"></span>${'aemsp_contact_erroroccured' @ i18n}</h3>
+
+				<p>${'aemsp_contact_tryagain' @ i18n}</p>
+
+				<p>${'aemsp_contact_team' @ i18n}</p>
+
+			</div>
+
+			<button title="Close" class="btn btn-block">${'aemsp_contact_close' @ i18n}</button>
+
+		</div>
+		<!-- Fancybox Error Message End -->
+
+	</div>
+</div>
+<!-- FancyboxContact End -->

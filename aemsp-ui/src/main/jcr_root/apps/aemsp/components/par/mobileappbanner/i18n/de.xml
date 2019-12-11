@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="de"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    
+    <aemsp_mobileAppBannerTitle
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_mobileAppBannerTitle"
+        sling:message="aemspH"/>
+    
+    <aemsp_mobileAppBannerAuthor
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_mobileAppBannerAuthor"
+        sling:message="Österreichischer aemsp"/>
+        
+    <aemsp_mobileAppBannerPrice
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_mobileAppBannerPrice"
+        sling:message="Gratis"/>
+    
+  	<aemsp_mobileAppBannerAppStoreLanguage
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_mobileAppBannerAppStoreLanguage"
+        sling:message="de"/>
+        
+  	<aemsp_mobileAppBannerInAppStore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_mobileAppBannerInAppStore"
+        sling:message="Im App Store"/>
+        
+  	<aemsp_mobileAppBannerInGooglePlay
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_mobileAppBannerInGooglePlay"
+        sling:message="Bei Google Play"/>
+        
+  	<aemsp_mobileAppBannerButton
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_mobileAppBannerButton"
+        sling:message="Anzeigen"/>
+   
+</jcr:root>

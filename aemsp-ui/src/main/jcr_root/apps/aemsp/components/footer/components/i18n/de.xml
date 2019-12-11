@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_footer_narrow
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_narrow"
+		sling:message="Schmale Fußzeile Komponente (33%)" />
+		
+	<aemsp_footer_wide
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_wide"
+		sling:message="Breite Fußzeile Komponente (66%)" />
+	
+	<aemsp_footer_tab
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_tab"
+		sling:message="Kolonne" />
+	
+	<aemsp_footer_settings
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_settings"
+		sling:message="Einstellungen" />
+		
+	<aemsp_footer_links
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_links"
+		sling:message="Links" />
+		
+	<aemsp_footer_mf_description
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_mf_description"
+		sling:message="Externe URLs müssen das Schema / Protokollteil enthalten, z.B. http://www.example.com" />
+	
+	<aemsp_footer_headline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_headline"
+		sling:message="Überschrift" />
+	
+	<aemsp_footer_links
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_links"
+		sling:message="Links" />
+
+	<aemsp_footer_linkText
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_linkText"
+		sling:message="Text" />
+	
+	<aemsp_footer_linkType
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_linkType"
+		sling:message="Link Typ" />
+	
+	<aemsp_footer_linkInternal
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_linkInternal"
+		sling:message="Internes" />
+	
+	<aemsp_footer_linkExternal
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_linkExternal"
+		sling:message="Externer URL" />
+		
+	<aemsp_footer_linkLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_linkLabel"
+		sling:message="Link" />
+		
+	<aemsp_footer_column1
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_column1"
+		sling:message="1. Kolonne" />
+		
+	<aemsp_footer_column2
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_column2"
+		sling:message="2. Kolonne" />
+	
+	<aemsp_footer_column3
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_column3"
+		sling:message="3. Kolonne" />
+	
+	<aemsp_footer_column4
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_column4"
+		sling:message="4. Kolonne" />
+	
+	<aemsp_footer_column5
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_column5"
+		sling:message="5. Kolonne" />
+	
+	<aemsp_footer_nnn
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_nnn"
+		sling:message="Drei Schmale Fußzeile Komponenten" />
+		
+	<aemsp_footer_wn
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_wn"
+		sling:message="Breite (Links) und Schmale (Rechts) Komponenten" />
+	
+	<aemsp_footer_nw
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_footer_nw"
+		sling:message="Schmale (Links) und Breite (Rechts) Komponenten" />
+			
+</jcr:root>

@@ -1,0 +1,18 @@
+<ul data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.header.metanavigation.MetaNavigationComponentBean" class="nav navbar-nav metaNavigation">
+	<li data-sly-test="${componentBean.subscriptionShown && componentBean.linkSet}"><a href="${componentBean.subscriptionLink}"><span class="oeav oeav-abonnement"></span> ${componentBean.subscriptionText}</a></li>
+	<li><a href="#contact"><span class="oeav oeav-users"></span> ${'aemsp_metanav_contact' @ i18n}</a></li>
+	<li data-sly-test="${componentBean.account}"><span class="oeav oeav-unlock"></span> ${'aemsp_metanav_hello' @ i18n} ${componentBean.account.firstName} ${componentBean.account.lastName}</li>
+	<li data-sly-test="${!componentBean.account}"><a href="#login"><span class="oeav oeav-lock"></span> ${'aemsp_metanav_login' @ i18n}</a></li>
+	<!-- When you are logged in change the text and the icon class to class="oeav oeav-unlock" -->
+	<!--<li><span class="oeav oeav-unlock"></span> Hallo Max Mustermann</li>-->
+	<!-- There is a Mobile breakpoint Language Bar on line 95 -->
+	<li data-sly-test="${componentBean.multipleLanguages}" class="langNavigation hidden-sm hidden-xs">
+		<div class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Language</a>
+			<ul class="dropdown-menu">
+				<li><a href="#">Deutsch</a></li>
+				<li><a href="#">English</a></li>
+			</ul>
+		</div>
+	</li>
+</ul>

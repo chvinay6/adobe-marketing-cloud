@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0" cq:layout="rollover"
+	cq:actions="[edit,annotate,-,copymove,delete]"
+	cq:dialogMode="floating" jcr:primaryType="cq:EditConfig">
+	<cq:inplaceEditing jcr:primaryType="cq:InplaceEditingConfig"
+		active="{Boolean}true" editorType="text">
+		<config jcr:primaryType="nt:unstructured">
+			<rtePlugins jcr:primaryType="nt:unstructured">
+				<format jcr:primaryType="nt:unstructured" features="*" />
+				<lists jcr:primaryType="nt:unstructured" features="*" />
+				<paraformat jcr:primaryType="nt:unstructured" features="*">
+					<formats jcr:primaryType="cq:WidgetCollection">
+						<p jcr:primaryType="nt:unstructured" tag="p" description="Paragraph"/>
+						<h3 jcr:primaryType="nt:unstructured" tag="h3" description="Heading 3"/>
+					</formats>
+				</paraformat>
+				<links jcr:primaryType="nt:unstructured" features="*" />
+				<spellcheck jcr:primaryType="nt:unstructured" features="*" />
+				<edit jcr:primaryType="nt:unstructured" features="*" defaultPasteMode="wordhtml"/>
+			</rtePlugins>
+			<uiSettings jcr:primaryType="nt:unstructured">
+				<cui jcr:primaryType="nt:unstructured">
+					<inline jcr:primaryType="nt:unstructured"
+						toolbar="[format#bold,format#italic,-,links#modifylink,links#unlink,links#anchor,-,#lists,-,#paraformat,-,spellcheck#checktext,-,fullscreen#start,-,control#close,control#save]">
+						<popovers jcr:primaryType="nt:unstructured">
+							<lists jcr:primaryType="nt:unstructured" 
+								ref="lists"
+								items="[lists#ordered,lists#unordered]" />
+							<paraformat jcr:primaryType="nt:unstructured"
+								ref="paraformat"
+								items="paraformat:getFormats:paraformat-pulldown" />
+						</popovers>
+					</inline>
+					<fullscreen jcr:primaryType="nt:unstructured" 
+						toolbar="[format#bold,format#italic,-,links#modifylink,links#unlink,links#anchor,-,lists#ordered,lists#unordered,-,#paraformat,-,spellcheck#checktext,-,fullscreen#finish,-,control#close,control#save]">
+						<popovers jcr:primaryType="nt:unstructured">
+							<paraformat jcr:primaryType="nt:unstructured"
+								ref="paraformat"
+								items="paraformat:getFormats:paraformat-pulldown" />
+						</popovers>
+					</fullscreen>	
+				</cui>
+			</uiSettings>
+		</config>
+	</cq:inplaceEditing>
+	<cq:listeners jcr:primaryType="cq:EditListenersConfig"
+		afterinsert="REFRESH_PAGE" afteredit="REFRESH_PAGE" afterdelete="REFRESH_PAGE"
+		aftercopy="REFRESH_PAGE" aftermove="REFRESH_PAGE" />
+</jcr:root>

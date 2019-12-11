@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_articlePageName
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articlePageName"
+		sling:message="Artikel Seite"/>
+	
+	<aemsp_articlePublishDate
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articlePublishDate"
+		sling:message="Veröffentlichung Datum"/>
+	
+	<aemsp_articlePublisAuthor
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articlePublisAuthor"
+		sling:message="Veröffentlichung Autor"/>
+	
+	<aemsp_articleBreakingNews
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleBreakingNews"
+		sling:message="Breaking News Datum"/>
+		
+	<aemsp_articleTeaser
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleTeaser"
+		sling:message="Artikel Teaser Text"/>
+		
+	<aemsp_tab_article
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_article"
+		sling:message="Artikel"/>
+	
+	<aemsp_articleArticleAuthorText
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleArticleAuthorText"
+		sling:message="Ein Artikel von "/>
+	
+	<aemsp_articleThumbnail
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleThumbnail"
+		sling:message="Artikel Miniatur"/>
+	
+	<aemsp_articleThumbnailAlt
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleThumbnailAlt"
+		sling:message="Alt Text"/>
+		
+	<aemsp_articleTextHeadline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleTextHeadline"
+		sling:message="Titel und Texte"/>
+
+	<aemsp_articlePropertiesHeadline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articlePropertiesHeadline"
+		sling:message="Artikel Eigenschaften"/>
+
+	<aemsp_articleThumbnailHeadline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleThumbnailHeadline"
+		sling:message="Artikel Miniatur"/>
+	
+	<aemsp_articleNotValidThumbnailErrorMessage
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidThumbnailErrorMessage"
+		sling:message="Artikel Miniatur ist ungültig."/>
+	
+			
+</jcr:root>

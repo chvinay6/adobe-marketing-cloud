@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="de"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <aemsp_imageslider_imageslider
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_imageslider"
+        sling:message="Fotostrecke"/>
+  	<aemsp_imageslider_slides
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_slides"
+        sling:message="Foilen"/>
+    <aemsp_imageslider_images
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_images"
+        sling:message="Bilder"/>
+    <aemsp_imageslider_images_description
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_images_description"
+        sling:message="Wählen Sie mindestens 4 Bilder"/>
+    <aemsp_imageslider_image
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_image"
+        sling:message="Bild *"/>
+    <aemsp_imageslider_image_upload
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_image_upload"
+        sling:message="Laden"/>
+    <aemsp_imageslider_caption
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_caption"
+        sling:message="Bildunterschrift *"/>
+    <aemsp_imageslider_copyright
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_copyright"
+        sling:message="Urheberrecht *"/>
+    <aemsp_imageslider_options
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_options"
+        sling:message="Optionen"/>
+    <aemsp_imageslider_headline
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_headline"
+        sling:message="Überschrift"/>
+    <aemsp_imageslider_auto
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_auto"
+        sling:message="Automatische Drehung"/>
+    <aemsp_imageslider_period
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_period"
+        sling:message="Periode"/>
+    <aemsp_imageslider_period_description
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_period_description"
+        sling:message="Drehung periode (in ms)"/>
+    <aemsp_imageslider_notenough
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_imageslider_notenough"
+        sling:message="Fügen Sie mindestens 4 Bilder hinzu um die Fotostrecke anzuzeigen"/>
+</jcr:root>

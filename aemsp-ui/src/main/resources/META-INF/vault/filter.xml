@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<filter root = "/apps/aemsp"/>
+	<filter root = "/apps/cq/gui"/>
+	<filter root = "/etc/designs/aemsp"/>
+	<filter root = "/etc/ecx.io/renditions/aemsp"/>
+	<filter root = "/etc/rep:policy/allowContentWriter"/>
+	<filter root = "/home/users/system/contentWriter"/>
+	<filter root = "/content/rep:policy/allowContentWriter"/>
+	<filter root = "/rep:policy/allowContentWriter"/>
+	<filter root = "/tmp/rep:policy/allowContentWriter"/>
+<!--     <filter root = "/etc/workflow/models/ecxio/"/> -->
+	<filter root = "/oak:index/ " mode="update">
+		<include pattern="\/oak:index\/aemsp_(.*)?"/>
+    </filter>
+</workspaceFilter>

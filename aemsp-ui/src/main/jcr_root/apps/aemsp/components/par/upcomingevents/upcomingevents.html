@@ -1,0 +1,34 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.upcomingevents.UpcomingEventsComponentBean" data-sly-test="${!componentBean.eventsExist}" class="cq-placeholder" data-emptytext="${'aemsp_upcoming_noevents' @ i18n}"></div>
+<div data-sly-test="${componentBean.eventsExist}" class="component component-upcomingEvents">
+	<h2>${'aemsp_upcoming_title' @ i18n}</h2>
+	<div class="results" id="eventListComponent-results">
+		<div class="items">
+			<div data-sly-list.event="${componentBean.events}" class="wrapper">
+				<div class="module module-imageTeaser module-eventListTeaser">
+					<div class="content">
+						<div class="wrapper">
+							<div class="metaInfo">
+								<ul>
+									<li>${event.fromDate} <div data-sly-test="${event.toDate}" data-sly-unwrap>- ${event.toDate}</div> ${event.additionalInfo}</li>
+									<div data-sly-list.tag="${event.categoryTags}" data-sly-unwrap>
+										<li><strong>${tag.name}</strong></li>
+									</div>
+								</ul>
+							</div>
+						</div>
+						<div class="head">
+							<!-- Prefix Start -->
+							<span class="prefix"> 
+								<a href="${event.eventPath}.html">${event.location}</a>
+							</span>
+							<!-- Prefix End -->
+							<h3>
+								<a href="${event.eventPath}.html">${event.headline}</a>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

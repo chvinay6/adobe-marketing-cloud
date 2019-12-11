@@ -1,0 +1,40 @@
+<div class="row wrapper controls">
+	<div class="col-ld-4">
+		<div class="goBack">
+			<a href="#" title="">${'aemsp_backButtonText' @ i18n}</a>
+		</div>
+	</div>
+	<div class="col-ld-8">
+		<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.sharemodule.ShareModuleComponentBean" data-sly-unwrap>
+			<div class="metaBar" >
+				<div class="actionBar">
+					<a href="#" class="print"></a> 
+					<a class="mail"
+						href="mailto:${'aemsp_share_email' @ i18n}?
+						subject=${componentBean.encodedTitle}
+						&body=${componentBean.encodedURL}"></a>
+				</div>
+				<div data-sly-test="${componentBean.encodedURL && componentBean.encodedTitle}" class="socialBar">
+					<a class="facebook breakout"
+						href="http://www.facebook.com/sharer/sharer.php?u=${componentBean.encodedURL}"
+						target="_blank"></a> 
+					<a class="twitter breakout" 
+						href="https://twitter.com/intent/tweet?status=${componentBean.encodedTitle}+${componentBean.encodedURL}"
+						target="_blank"></a>  
+					<a class="linkedin breakout"
+						href="https://www.linkedin.com/shareArticle?mini=true&url=${componentBean.encodedURL}"
+						target="_blank"></a> 
+					<a class="googleplus breakout"
+						href="https://plus.google.com/share?url=${componentBean.encodedURL}"
+						target="_blank"></a> 
+					<a class="xing breakout"
+						href="https://www.xing.com/spi/shares/new?url=${componentBean.encodedURL}"
+						target="_blank"></a> 
+					<a data-sly-test="${componentBean.encodedImageURL}" class="pinterest breakout"
+						href="http://pinterest.com/pin/create/bookmarklet/?media=${componentBean.encodedImageURL}&url=${componentBean.encodedURL}&is_video=false&description=${componentBean.encodedTitle}"
+						target="_blank"></a> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div
+	data-sly-use.componentBean="${'io.ecx.aem.aemsp.core.components.par.featuredarticle.FeaturedArticleComponentBean' @servletSelector='fitIn',renditionSelector='featuredarticle',fileExtension='*'}"
+	data-sly-unwrap>
+	<div data-sly-test="${wcmmode.edit && !componentBean.selectionValid}" class="alert alert-danger" role="alert">${componentBean.validationMessage}</div>
+	<div data-sly-test="${componentBean.selectionValid}" class="module module-imageTeaser topArticle">
+
+		<figure>
+			<a href="${componentBean.articleLink}">
+				<picture data-sly-test.hasImage="${componentBean.image && componentBean.image.path}">
+				<source srcset="${componentBean.image.cachablePath @ context='uri'}" media="(min-width: 1280px)">
+				<source srcset="${componentBean.desktopImage.cachablePath @ context='uri'}" media="(min-width: 992px) and (max-width: 1279px)">
+				<source srcset="${componentBean.tabletImage.cachablePath @ context='uri'}" media="(min-width: 768px) and (max-width: 991px)">
+				<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" srcset="${componentBean.mobileImage.cachablePath @ context='uri'}" title="${componentBean.image.title}"
+					alt="${componentBean.image.alt}"> </picture>
+			</a>
+		</figure>
+
+		<div class="head">
+			<span class="prefix border">
+				<a href="${componentBean.articleLink}">
+					${componentBean.articlePrefixText}
+					<div class="tag-wrapper" data-sly-test="${componentBean.breakingNews}">
+						<breakingDefaultText data-sly-test.breakingDefaultText="${'aemsp_articlePrefixTopArticle' @ i18n}" data-sly-unwrap></breakingDefaultText>
+						<span class="tag">${pageProperties.breakingNewsText ? pageProperties.breakingNewsText : breakingDefaultText}</span>
+					</div>
+				</a>
+			</span>
+			<h2>
+				<a href="${componentBean.articleLink}">${componentBean.articleMainHeadline}</a>
+			</h2>
+		</div>
+
+		<p>
+			${componentBean.articleTeaserText @ context='html'}
+			<a href="${componentBean.articleLink}" class="more">${'aemsp_readMore' @ i18n}</a>
+		</p>
+		<div class="wrapper">
+			<div class="metaInfo">${componentBean.metaInfo}</div>
+		</div>
+	</div>
+</div>

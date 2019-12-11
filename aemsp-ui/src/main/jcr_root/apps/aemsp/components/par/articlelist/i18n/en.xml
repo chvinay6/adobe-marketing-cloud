@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="en"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+		
+	<aemsp_articleList
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleList"
+		sling:message="List Component"/>
+	
+	<aemsp_ListTypeHeadline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_ListTypeHeadline"
+		sling:message="Headline"/>
+	
+	<aemsp_ListType
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_ListType"
+		sling:message="List Type"/>
+	
+	<aemsp_articleListType
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleListType"
+		sling:message="Article List"/>
+	
+	<aemsp_articleListNumber
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleListNumber"
+		sling:message="Item Number"/>
+
+	<aemsp_commercialListType
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_commercialListType"
+		sling:message="Commercial Register List"/>
+	
+	<aemsp_commercialListNumber
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_commercialListNumber"
+		sling:message="Commercial Number"/>
+	
+	<aemsp_articlelistLoadMore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articlelistLoadMore"
+        sling:message="Load more Items"/> 
+        
+   <aemsp_articlelistReadMore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articlelistReadMore"
+        sling:message="more"/> 
+   
+    <aemsp_articlelistNoResults
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articlelistNoResults"
+        sling:message="No results found."/> 
+        
+    <aemsp_articlelistAddFilter
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articlelistAddFilter"
+        sling:message="Add Filter:"/>
+
+    <aemsp_articlelistTabList
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articlelistTabList"
+        sling:message="List"/> 
+ 
+    <aemsp_articlelistFilterTab
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_articlelistFilterTab"
+        sling:message="Filters"/>          
+    
+    <aemsp_offerListType
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_offerListType"
+		sling:message="Offer List"/>
+		
+</jcr:root>

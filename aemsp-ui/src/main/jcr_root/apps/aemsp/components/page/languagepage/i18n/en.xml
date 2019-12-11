@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="en" jcr:mixinTypes="[mix:language]" jcr:primaryType="sling:Folder">
+	<aemsp_tab_banners jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_banners" sling:message="Banners" />
+
+	<aemsp_languagePageName
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageName"
+		sling:message="Homepage" />
+		
+	<aemsp_domain
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_domain"
+		sling:message="Domain" />
+
+	<aemsp_languageSelectDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languageSelectDescription"
+		sling:message="The language code of the selected language will be used in the url" />
+
+	<aemsp_languageTranslationsTitle
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languageTranslationsTitle"
+		sling:message="Translations" />
+
+	<aemsp_tab_article_data
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_tab_article_data"
+		sling:message="Homepage Settings" />
+
+	<aemsp_languageTranslationsName
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languageTranslationsName"
+		sling:message="Translations" />
+
+	<aemsp_tab_article_data_loginHeadline
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_tab_article_data_loginHeadline"
+		sling:message="Login Settings" />
+
+	<aemsp_languagePageLoginForgotTextLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageLoginForgotTextLabel"
+		sling:message='"Forgot Password"-Text' />
+
+	<aemsp_languagePageLoginForgotLinkLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageLoginForgotLinkLabel"
+		sling:message='"Forgot Password"-Link' />
+
+	<aemsp_languagePageLoginRegisterTextLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageLoginRegisterTextLabel"
+		sling:message='"Register"-Text' />
+
+	<aemsp_languagePageLoginRegisterLinkLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_languagePageLoginRegisterLinkLabel"
+		sling:message='"Register"-Link' />
+	<aemsp_articleChiefEditorDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_articleChiefEditorDescription"
+		sling:message="User group for the article approval workflow" />
+
+	<aemsp_breakingNewsLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_breakingNewsLabel"
+		sling:message="Breaking News Text" />
+
+	<aemsp_breakingNewsDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_breakingNewsDescription"
+		sling:message="This text will be displayed on articles, which are configured as breaking news" />
+
+	<aemsp_googleAnalyticsLabel
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_googleAnalyticsLabel"
+		sling:message="Google Analytics ID" />
+
+	<aemsp_logoLabel jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_logoLabel" sling:message='Logo' />
+
+	<aemsp_logoDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_logoDescription"
+		sling:message='Choose an image-file from DAM' />
+
+	<aemsp_faviconDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_faviconDescription"
+		sling:message='Select an image of type ".ico"' />
+
+	<aemsp_touchiconDescription
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_touchiconDescription"
+		sling:message='Select an image of type ".png"' />
+
+	<aemsp_browser_headline
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_headline"
+		sling:message="Browser Information" />
+
+	<aemsp_cookie_headline
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_headline"
+		sling:message="Cookie Information" />
+
+	<aemsp_app_headline jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_app_headline" sling:message="Mobile App Information" />
+
+	<aemsp_enable jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_enable" sling:message="Enable" />
+
+	<aemsp_userinfo_headline
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_userinfo_headline"
+		sling:message="Headline" />
+
+	<aemsp_userinfo_text jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_userinfo_text" sling:message="Text" />
+
+	<aemsp_userinfo_cookie_enable
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_userinfo_cookie_enable"
+		sling:message="Show Cookie Information Link" />
+
+	<aemsp_userinfo_link jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_userinfo_link" sling:message="Link" />
+
+	<aemsp_userinfo_linkText
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_userinfo_linkText"
+		sling:message="Link Text" />
+
+	<aemsp_userinfo_buttonText
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_userinfo_buttonText"
+		sling:message="Button Text" />
+
+	<aemsp_browser_text_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_text_default"
+		sling:message="This Website is optimized for Firefox, Chrome and Safari." />
+
+	<aemsp_browser_link_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_link_default"
+		sling:message="&#35;" />
+
+	<aemsp_browser_linkText_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_linkText_default"
+		sling:message="More about supported browsers" />
+
+	<aemsp_browser_buttonText_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_browser_buttonText_default"
+		sling:message="Close" />
+
+	<aemsp_cookie_text_headline_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_text_headline_default"
+		sling:message="This website uses cookies" />
+
+	<aemsp_cookie_text_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_text_default"
+		sling:message="We use cookies to give you the best possible experience of our website. Continuing to use the website means you agree and understand our cookie policy." />
+
+	<aemsp_cookie_link_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_link_default"
+		sling:message="&#35;" />
+
+	<aemsp_cookie_linkText_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_linkText_default"
+		sling:message="Find more about cookies here" />
+
+	<aemsp_cookie_buttonText_default
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_cookie_buttonText_default"
+		sling:message="OK" />
+
+	<aemsp_app_title_label
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_title_label"
+		sling:message="Title" />
+
+	<aemsp_app_author_label
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_author_label"
+		sling:message="Author" />
+
+	<aemsp_app_price_label
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_price_label"
+		sling:message="Price" />
+
+	<aemsp_app_appleCode jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_app_appleCode" sling:message="Apple Code" />
+
+	<aemsp_app_googleCode jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_app_googleCode" sling:message="Google Code" />
+
+	<aemsp_app_appleCodeNotConfiguredError
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_appleCodeNotConfiguredError"
+		sling:message='The apple-code for the mobile app banner has not been configured. Please set apple-code under the page properties in the "Banners"-Tab or deactivate the mobile app banner function for this language.' />
+
+	<aemsp_app_googleCodeNotConfiguredError
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_app_googleCodeNotConfiguredError"
+		sling:message='The google-code for the mobile app banner has not been configured. Please set google-code under the page properties in the "Banners"-Tab or deactivate the mobile app banner function for this language.' />
+
+	<aemsp_validationDefaultError
+		jcr:primaryType="sling:MessageEntry" sling:key="aemsp_validationDefaultError"
+		sling:message="The value of this field does not match the requirements!" />
+
+
+</jcr:root>

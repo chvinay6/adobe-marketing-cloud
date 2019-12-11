@@ -1,0 +1,121 @@
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+	jcr:primaryType="nt:unstructured"
+	jcr:title="aemsp_tab_article"
+	sling:resourceType="granite/ui/components/foundation/container">
+             
+    <items jcr:primaryType="nt:unstructured">	
+
+		<general
+	        jcr:primaryType="nt:unstructured"
+	        jcr:title="accelerator_basic_general"
+            sling:resourceType="granite/ui/components/foundation/section">
+            
+            	<layout
+            	 	jcr:primaryType="nt:unstructured"
+	        		margin="{Boolean}false"
+           			sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+           		<items jcr:primaryType="nt:unstructured">	
+	           		<column
+	           			jcr:primaryType="nt:unstructured"
+	           			sling:resourceType="granite/ui/components/foundation/container">
+	               
+		           		<items jcr:primaryType="nt:unstructured">
+		           			<textHeadline jcr:primaryType="nt:unstructured"
+		           				   jcr:title="aemsp_articleTextHeadline"
+		           				   sling:resourceType="granite/ui/components/foundation/form/fieldset">
+		           				   <items jcr:primaryType="nt:unstructured">
+			           				    <articleMain
+						           			jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="aemsp_articleMainHeadline"
+											name="./parHead/articlemainheadline/text"
+											required="{Boolean}true" />
+											
+						           		<articlePrefix
+						           			jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textfield"
+											fieldLabel="aemsp_articlePrefix"
+											name="./parHead/articleprefix/text" />	
+																
+										<articleSubline
+						           			jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textfield"
+											fieldLabel="aemsp_articleSubline"
+											name="./parHead/articlesubline/text" />
+											
+										<articleTeaser
+						           			jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+											fieldLabel="aemsp_articleTeaser"
+											name="./parTeaser/articleteaser/text"
+											required="{Boolean}true" />
+				           		  </items>
+		           		     </textHeadline>
+		           					
+		           			<propertiesHeadline jcr:primaryType="nt:unstructured"
+		           				   jcr:title="aemsp_articlePropertiesHeadline"
+		           				   cq:showOnCreate="{Boolean}false"
+		           				   sling:resourceType="granite/ui/components/foundation/form/fieldset">
+		           				   <items jcr:primaryType="nt:unstructured">							
+										<author
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/userpicker"
+											fieldLabel="aemsp_articlePublisAuthor"
+											name="./articlePublisher"/>	
+											
+										<publishDate
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/datepicker"
+											type="datetime"
+											fieldLabel="aemsp_articlePublishDate"
+											name="./publishDate"/>
+										
+										<breakingNewsDate
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/datepicker"
+											type="datetime"
+											fieldLabel="aemsp_articleBreakingNews"
+											name="./breakingNewsDate"/>
+									</items>
+								</propertiesHeadline>
+							    <thumbnailHeadline jcr:primaryType="nt:unstructured"
+		           				   jcr:title="aemsp_articleThumbnailHeadline"
+		           				   sling:resourceType="granite/ui/components/foundation/form/fieldset">
+		           				   <items jcr:primaryType="nt:unstructured">
+		           				   		
+		           				   	<articleThumbnailSelector
+			                                jcr:primaryType="nt:unstructured"
+			                                sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+			                                fieldLabel="aemsp_articleThumbnail"
+			                                required="{Boolean}true"
+			                                name="./articleThumbnail/fileReference"
+			                                rootPath="/content/dam">
+				                                <granite:data
+				                                    jcr:primaryType="nt:unstructured"
+				                                    enable-path-browser-preview="{Boolean}true"
+				                                    preview-url="$path.thumb.319.319.png"/>
+	                           			</articleThumbnailSelector>
+													
+										<articleThumbnailAlt
+											jcr:primaryType="nt:unstructured"
+									        fieldLabel="aemsp_articleThumbnailAlt"
+									        name="./articleThumbnail/imageAlt"
+									        sling:resourceType="granite/ui/components/foundation/form/textfield"/>
+									 </items>
+							  </thumbnailHeadline>
+							  <languagesHeadline jcr:primaryType="nt:unstructured"
+		           				   jcr:title="aemsp_articleLanguagesHeadline"
+		           				   sling:resourceType="granite/ui/components/foundation/form/fieldset"
+		           				   cq:showOnCreate="{Boolean}false"
+		           				   language-picker="">
+		           				   <items jcr:primaryType="nt:unstructured"></items>
+		           		     </languagesHeadline>
+								
+						</items>
+					</column>
+				</items>
+		</general>
+						
+	</items>
+	
+</jcr:root>

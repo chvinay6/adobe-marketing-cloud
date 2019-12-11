@@ -1,0 +1,52 @@
+<!-- User Information Start  -->
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.page.base.BasePageComponentBean" class="ecx userInformation">
+	
+	<!-- Browser Note Start  -->
+	<div data-sly-test="${componentBean.userInfo.browserInfoEnabled}" id="browserLayerContainerWrapper" class="infoBanner browserInformation" role="alert" aria-hidden="true" style="display: none;">
+		<div id="browserLayerContainer" class="browserLayer container">
+	        <div class="wrapper">	
+	            <div class="button pull-right">
+	                <button type="button" class="btn pull-right" aria-label="browserwarning" id="browserLayerCloseBtn">
+	                	${componentBean.userInfo.browserButtonText ? componentBean.userInfo.browserButtonText : 'aemsp_browser_buttonText_default' @ i18n}
+	                </button>
+	            </div>
+	            
+	            <div class="content">
+	                <p>
+	                    ${componentBean.userInfo.browserText ? componentBean.userInfo.browserText : 'aemsp_browser_text_default' @ i18n}
+	                    <a href="${componentBean.userInfo.browserLink ? componentBean.userInfo.browserLink : 'aemsp_browser_link_default' @i18n}">
+	                    	${componentBean.userInfo.browserLinkText ? componentBean.userInfo.browserLinkText : 'aemsp_browser_linkText_default' @i18n}
+	                    </a>
+	                </p>
+	            </div>
+	        </div>
+		</div>
+	</div>
+	<!-- Browser Note End  -->
+
+    <!-- Cookie Note Start  -->
+
+	<div data-sly-test="${componentBean.userInfo.cookieInfoEnabled}" id="cookieLayerContainerWrapper" class="infoBanner cookieInformation" role="alert" style="display: none;">
+		<div id="cookieLayerContainer" class="cookieLayer container">
+        	<div class="wrapper">
+            	<div class="button pull-right">
+    				<button type="button" class="btn pull-right" aria-label="accept" id="cookieLayerAcceptBtn">
+    					${componentBean.userInfo.cookieButtonText ? componentBean.userInfo.cookieButtonText : 'aemsp_cookie_buttonText_default' @ i18n}
+    				</button>
+    			</div>
+            	<div class="content">
+               		<h3>${componentBean.userInfo.cookieHeadline ? componentBean.userInfo.cookieHeadline : 'aemsp_cookie_text_headline_default' @i18n}</h3>
+                	<p>
+                    	${componentBean.userInfo.cookieText ? componentBean.userInfo.cookieText : 'aemsp_cookie_text_default' @ i18n}
+                    	<a data-sly-test="${componentBean.userInfo.cookieLinkEnabled}" href="${componentBean.userInfo.cookieLink ? componentBean.userInfo.cookieLink : 'aemsp_cookie_link_default' @i18n}">
+                    		${componentBean.userInfo.cookieLinkText ? componentBean.userInfo.cookieLinkText : 'aemsp_cookie_linkText_default' @i18n}
+                    	</a>
+                	</p>
+    			</div>
+        	</div>
+		</div>
+	</div>
+	<!-- Cookie Note End  -->
+	
+</div>
+<!-- User Information End  -->

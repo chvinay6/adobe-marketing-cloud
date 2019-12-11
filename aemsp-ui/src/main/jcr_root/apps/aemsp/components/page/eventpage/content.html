@@ -1,0 +1,32 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.page.eventpage.EventPageComponentBean" data-sly-unwrap>
+	<div class="container">
+		<div class="wrapper">
+			<main role="main" id="main">
+			<div class="module module-imageTeaser topArticle">
+				<figure>
+					<div data-sly-resource="${'parArticleImage' @ resourceType='aemsp/components/par/lockedpar'}" data-sly-unwrap></div>
+				</figure>
+				<div data-sly-test="${componentBean.backAndShareBarPosition == 'after-image'}" data-sly-resource="${'backAndShareBar' @ resourceType='aemsp/components/par/backAndShareBar'}" data-sly-unwrap></div>
+				<div class="head">
+					<div data-sly-resource="${'parHead' @ resourceType='aemsp/components/par/lockedpar'}" data-sly-unwrap></div>
+				</div>
+				<div class="wrapper">
+					<div class="metaInfo">
+						${componentBean.metaInfo}<strong data-sly-test="${componentBean.categories}">${componentBean.categories}</strong>
+					</div>
+					<div data-sly-resource="${'languagepicker' @ resourceType='aemsp/components/par/languagepicker'}" data-sly-unwrap></div>
+				</div>
+				<div data-sly-test="${componentBean.backAndShareBarPosition == 'after-meta'}" data-sly-resource="${'backAndShareBar' @ resourceType='aemsp/components/par/backAndShareBar'}" data-sly-unwrap></div>
+				<div class="actionButton">
+					<a class="calendar" href="#">${'aemsp_eventSave' @ i18n}</a>
+				</div>
+				<div data-sly-test="${componentBean.backAndShareBarPosition == 'after-teaser'}" data-sly-resource="${'backAndShareBar' @ resourceType='aemsp/components/par/backAndShareBar'}" data-sly-unwrap></div>
+			</div>
+							<div data-sly-resource="${'parRte' @ resourceType='aemsp/components/par/lockedpar'}" data-sly-unwrap></div>
+			<div data-sly-resource="${'rtePar' @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+			<div data-sly-resource="${'articlepager' @ resourceType='aemsp/components/par/articlepager'}" data-sly-unwrap></div>
+			</main>
+			<aside role="sidebar" id="sidebar"></aside>
+		</div>
+	</div>
+</div>

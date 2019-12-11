@@ -1,0 +1,23 @@
+<div data-sly-test="${!properties.text}" class="cq-placeholder" data-emptytext="${'aemsp_rte' @ i18n}"></div>
+<div data-sly-use.componentBean="${'io.ecx.aem.aemsp.core.components.par.image.ImageComponentBean' @servletSelector='fitIn',renditionSelector='rteimage',fileExtension='*'}" class="module module-content ${properties.highlight && 'highlighted'}">
+	<h2 data-sly-test="${properties.headline}">${properties.headline}</h2>
+		<div data-sly-test.hasImage="${componentBean.image && componentBean.image.path && properties.enable}" class="${properties.imgPosition}">
+			<figure>
+				<div data-sly-use.linkChecker="${'io.ecx.aem.aemsp.core.components.par.linkchecker.LinkCheckerComponentBean' @ link=properties.link}" data-sly-unwrap></div>
+					<a class="${properties.link ? '' : 'fancybox'}" href="${properties.link ? linkChecker.validLink : componentBean.image.cachablePath @ context='uri'}" target="${linkChecker.internal ? '' : '_blank'}" title="Content image" data-image-headline="${properties.caption}">
+						<picture>
+							<!--[if IE 9]><video style="display: none;"><![endif] -->
+							<source srcset="${componentBean.image.cachablePath @ context='uri'}" media="(min-width: 1280px)">
+							<source srcset="${componentBean.tabletImage.cachablePath @ context='uri'}" media="(min-width: 992px) and (max-width: 1279px)">
+							<source srcset="${componentBean.mobileImage.cachablePath @ context='uri'}" media="(min-width: 768px) and (max-width: 991px)">
+							<!--[if IE 9]></video><![endif] -->
+							<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" srcset="${componentBean.desktopImage.cachablePath @ context='uri'}" alt="${componentBean.image.alt}">
+						</picture>
+					</a>
+				<figcaption class="small" data-sly-test="${hasImage && componentBean.imageText}">${componentBean.imageText}</figcaption>
+			</figure>
+		</div>
+	<div data-sly-test="${properties.text}" data-sly-unwrap>
+		${properties.text @ context='html'}
+	</div>
+</div>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_eventPageName
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventPageName"
+		sling:message="Event"/>
+		
+	<aemsp_tab_event
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_event"
+		sling:message="Eventdaten"/>
+		
+	<aemsp_headline_thumbnail
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_headline_thumbnail"
+		sling:message="Event Miniatur"/>
+		
+	<aemsp_event_thumbnail_alt
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_event_thumbnail_alt"
+		sling:message="Alt Text"/>
+	
+	<aemsp_eventFromDate
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventFromDate"
+		sling:message="Startdatum"/>
+		
+	<aemsp_eventToDate
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventToDate"
+		sling:message="Enddatum"/>
+		
+	<aemsp_eventToDescription
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventToDescription"
+		sling:message="Freilassen, falls das Event an nur einem Tag stattfindet."/>
+		
+	<aemsp_eventLocationLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventLocationLabel"
+		sling:message="Ort"/>
+		
+	<aemsp_eventHeadlineLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventHeadlineLabel"
+		sling:message="Eventüberschrift"/>
+		
+	<aemsp_eventShortTextLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventShortTextLabel"
+		sling:message="Kurztext"/>
+		
+	<aemsp_eventShortTextDescription
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventShortTextDescription"
+		sling:message="Dieser Text wird auf der Detailseite und auf der Eventliste angezeigt"/>
+		
+	<aemsp_eventLongTextLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventLongTextLabel"
+		sling:message='"Mehr Information"-Text'/>
+		
+	<aemsp_eventTimeLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventTimeLabel"
+		sling:message="Zusatzinfo"/>
+		
+	<aemsp_eventTimeDescription
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventTimeDescription"
+		sling:message="Wird neben dem Datum angezeigt. (z.B. Zeit)"/>
+		
+	<aemsp_eventSave
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_eventSave"
+		sling:message="Termin speichern"/>
+	
+</jcr:root>

@@ -1,0 +1,11 @@
+<template data-sly-template.picture="${@ componentBean }">
+		<picture data-sly-test.hasImage="${componentBean.image && componentBean.image.path}">
+			<!--[if IE 9]><video style="display: none;"><![endif] -->
+			<source srcset="${componentBean.image.cachablePath @ context='uri'}" media="(min-width: 1280px)">
+			<source srcset="${componentBean.desktopImage.cachablePath @ context='uri'}" media="(min-width: 992px) and (max-width: 1279px)">
+			<source srcset="${componentBean.tabletImage.cachablePath @ context='uri'}" media="(min-width: 768px) and (max-width: 991px)">
+			<!--[if IE 9]></video><![endif] -->
+			<img class="cq-dd-image" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" srcset="${componentBean.mobileImage.cachablePath @ context='uri'}" title="${componentBean.image.title}" alt="${componentBean.image.alt}">
+		</picture>
+		<figcaption data-sly-test="${hasImage && componentBean.imageText}">${componentBean.imageText}</figcaption>
+</template>

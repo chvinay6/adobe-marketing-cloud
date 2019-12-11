@@ -1,0 +1,29 @@
+/** used on the author edit mode*/
+
+.author_image_drop_placeholder{
+	width: 100%;
+}
+
+.author_image_drop_placeholder .author_image_placeholder{
+	background: url("/etc/designs/io.ecx.common/images/imgPlaceholder.png") !important;
+	height: 64px !important;
+	width: 64px !important;
+}
+
+.author_image_drop_placeholder img{
+	width: 64px !important;
+}
+
+#page > .container{
+	min-height: 0 !important;
+}
+
+html {font-size:inherit !important;}
+
+.cq-ComponentDictionary-action{
+	display: none !important;
+}
+
+.custom_multifield_input {
+	width: 15.5rem !important;
+}

@@ -1,0 +1,97 @@
+<head data-sly-use.head="/libs/wcm/foundation/components/page/head.js"
+      data-sly-use.headlibRenderer="/libs/wcm/foundation/components/page/headlibs.html"
+      data-sly-use.wcmInit="/libs/wcm/foundation/components/page/initwcm.js"
+      data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+	<!--/* Outputs the WCM initialization code.If WCM mode is disabled nothing is rendered */-->
+    <meta data-sly-test="${!wcmmode.disabled && wcmInit.isTouchAuthoring}" data-sly-call="${clientLib.all @ categories='cq.authoring.page'}" data-sly-unwrap></meta>
+    <meta data-sly-test="${!wcmmode.disabled && !wcmInit.isTouchAuthoring}" data-sly-call="${clientLib.js @ categories='cq.wcm.edit'}" data-sly-unwrap></meta>
+    <!-- /* only output the author css if we're in edit mode - ensures jquery-ui css is not loaded in preview mode */ -->
+    <meta data-sly-test="${(wcmmode.edit || wcmmode.design) && !wcmInit.isTouchAuthoring}" data-sly-call="${clientLib.css @ categories='cq.wcm.edit'}" data-sly-unwrap></meta>
+    <script data-sly-test="${!wcmmode.disabled && !wcmInit.isTouchAuthoring}" type="text/javascript">
+        (function() {
+
+            var cfg = ${wcmInit.undoConfig @ context='unsafe'};
+            cfg.pagePath = "${currentPage.path @ context='uri'}";
+
+            if (CQClientLibraryManager.channelCB() != "touch") {
+                cfg.enabled = ${wcmmode.edit @ context="scriptString"};
+                CQ.undo.UndoManager.initialize(cfg);
+                CQ.Ext.onReady(function() {
+                    CQ.undo.UndoManager.detectCachedPage((new Date()).getTime());
+                });
+            }
+        })();
+
+        CQ.WCM.launchSidekick("${currentPage.path @ context='uri'}", {
+            propsDialog: "${wcmInit.dialogPath @ context='uri'}",
+            locked: ${currentPage.locked @ context="scriptString"},
+            previewReload: "true"
+        });
+    </script>
+    <!--/* WCM initialization code end */-->
+
+	<title>${currentPage.title}</title>
+
+	<meta charset="utf-8" />
+	<!--[if ie]><meta http-equiv=X-UA-Compatible content="IE=Edge"><![endif]-->	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="canonical" href="${currentPage.path}.html" />
+
+
+	<favicon data-sly-use.iconBean="${'io.ecx.aem.aemsp.core.components.page.base.IconComponentBean'}" data-sly-unwrap>
+		<link data-sly-test="${iconBean.faviconPath}" rel="icon" type="image/x-icon" href="${iconBean.faviconPath}">
+		<link data-sly-test="${iconBean.faviconPath}" rel="shortcut icon" type="image/x-icon" href="${iconBean.faviconPath}" />
+		<link data-sly-test="${iconBean.touchiconPath128}" rel="icon" type="image/png" sizes="128x128" href="${iconBean.touchiconPath128}"/>
+    	<link data-sly-test="${iconBean.touchiconPath192}" rel="icon" type="image/png" sizes="192x192" href="${iconBean.touchiconPath192}"/>
+		<link data-sly-test="${iconBean.touchiconPath57}" rel="apple-touch-icon" sizes="57x57" href="${iconBean.touchiconPath57}" />
+		<link data-sly-test="${iconBean.touchiconPath60}" rel="apple-touch-icon" sizes="60x60" href="${iconBean.touchiconPath60}"/>
+  		<link data-sly-test="${iconBean.touchiconPath72}" rel="apple-touch-icon" sizes="72x72" href="${iconBean.touchiconPath72}" />
+		<link data-sly-test="${iconBean.touchiconPath76}" rel="apple-touch-icon" sizes="76x76" href="${iconBean.touchiconPath76}" />
+		<link data-sly-test="${iconBean.touchiconPath114}" rel="apple-touch-icon" sizes="114x114" href="${iconBean.touchiconPath114}" />
+		<link data-sly-test="${iconBean.touchiconPath120}" rel="apple-touch-icon" sizes="120x120" href="${iconBean.touchiconPath120}" />
+		<link data-sly-test="${iconBean.touchiconPath144}" rel="apple-touch-icon" sizes="144x144" href="${iconBean.touchiconPath144}" />
+		<link data-sly-test="${iconBean.touchiconPath152}" rel="apple-touch-icon" sizes="152x152" href="${iconBean.touchiconPath152}" />
+		<link data-sly-test="${iconBean.touchiconPath180}" rel="apple-touch-icon" sizes="180x180" href="${iconBean.touchiconPath180}" />
+	</favicon>
+	
+	<banner data-sly-use.bannerComponentBean="${'io.ecx.aem.aemsp.core.components.par.mobileappbanner.MobileAppBannerComponentBean'}" data-sly-unwrap>
+		<script type="text/javascript">
+			var appBannerTitle = "${bannerComponentBean.title @ context ='html'}";
+			var appBannerAuthor = "${bannerComponentBean.author @context ='html'}";
+			var appBannerPrice = "${bannerComponentBean.price @context ='html'}";
+		</script>
+		<bannerMeta data-sly-test="${bannerComponentBean.activated}" data-sly-unwrap>
+			<!-- Smart App Banner for iOS -->
+			<meta data-sly-test="${bannerComponentBean.appleCode}" name="apple-itunes-app" content="app-id=${bannerComponentBean.appleCode}">
+			<meta data-sly-test="${bannerComponentBean.googleCode}" name="google-play-app" content="app-id=${bannerComponentBean.googleCode}">
+		</bannerMeta>
+	</banner>
+	
+	<meta data-sly-call="${clientLib.css @ categories='aemsp.clientlibs'}" data-sly-unwrap></meta>
+	
+	<authorcss data-sly-test.author="${!wcmmode.disabled}" data-sly-unwrap>
+		<link rel="stylesheet" href="/etc/designs/aemsp/clientlibs/css/author.css"/>
+	</authorcss>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/etc/designs/aemsp/clientlibs/js/jquery.min.js"><\/script>')</script>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script>(window.jQuery && window.jQuery.ui) || document.write('<script src="/etc/designs/aemsp/clientlibs/js/jquery.ui.min.js"><\/script>')</script>
+	
+		
+<!-- Google Webfonts -->
+	<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,400i,700,700i" rel="stylesheet">
+	
+
+	<script data-sly-call="${clientLib.js @ categories='aemsp.clientlibs'}" data-sly-unwrap></script>
+
+</head>

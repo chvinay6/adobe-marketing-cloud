@@ -1,0 +1,10 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.videomodule.VideoModuleComponentBean" data-sly-unwrap>
+	<div data-sly-test="${!componentBean.url}" class="cq-placeholder" data-emptytext="${'aemsp_videomodule' @ i18n}"></div>
+	<div data-sly-test="${componentBean.url}" class="module module-content module-video">
+		<h2 data-sly-test="${componentBean.title}">${componentBean.title}</h2>
+		<figure>
+			<iframe src="${componentBean.url}" width="${componentBean.width}" height="${componentBean.height}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<figcaption data-sly-test="${componentBean.caption || componentBean.copyright}">${componentBean.caption}${componentBean.copyright}</figcaption>
+		</figure>
+	</div>
+</div>

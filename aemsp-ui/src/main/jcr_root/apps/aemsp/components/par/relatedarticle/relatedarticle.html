@@ -1,0 +1,54 @@
+<div
+	data-sly-use.componentBean="${'io.ecx.aem.aemsp.core.components.par.relatedarticle.RelatedArticleComponentBean'  @servletSelector='fitIn',renditionSelector='relatedarticle',fileExtension='*'}"
+	data-sly-unwrap>
+	<div data-sly-test="${wcmmode.edit || !componentBean.relatedArticles.empty}" class="module module-content">
+		<h2>${'aemsp_relatedArticleHeadline' @ i18n}</h2>
+	</div>
+	<div data-sly-test="${wcmmode.edit && !componentBean.selectionValid}" class="alert alert-danger" role="alert">${componentBean.errorMessage @ context='html'}</div>
+	<div data-sly-test="${!componentBean.relatedArticles.empty}" class="page-list">
+		<div class="results">
+			<div class="wrapper">
+				<div data-sly-list="${componentBean.relatedArticles}" class="items">
+					<div class="module module-imageTeaser module-articleListTeaser">
+						<figure>
+							<a href="${item.articleLink}">
+								<picture>
+								<source srcset="${item.desktopImage.cachablePath @ context='uri'}" media="(min-width: 1280px)">
+								<source srcset="${item.desktopImage.cachablePath @ context='uri'}" media="(min-width: 992px) and (max-width: 1279px)">
+								<source srcset="${item.tabletImage.cachablePath @ context='uri'}" media="(min-width: 768px) and (max-width: 991px)">
+								<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" srcset="${item.mobileImage.cachablePath @ context='uri'}"> </picture>
+							</a>
+						</figure>
+						<div class="content">
+							<div class="head">
+								<!-- Prefix Start -->
+								<span class="prefix border">
+									<a href="">
+										${item.article.articlePrefix}
+										<div data-sly-test="${item.article.breakingNews}" class="tag-wrapper">
+											<breakingDefaultText data-sly-test.breakingDefaultText="${'aemsp_articlePrefixTopArticle' @ i18n}" data-sly-unwrap></breakingDefaultText>
+											<span class="tag">${componentBean.breakingNewsText ? componentBean.breakingNewsText : breakingDefaultText}</span>
+										</div>
+									</a>
+								</span>
+								<!-- Prefix End -->
+								<h3>
+									<a href="${item.articleLink}">${item.article.articleMainHeadline}</a>
+								</h3>
+							</div>
+							<p>
+								${item.article.truncatedArticleTeaserText}
+								<a class="teaser" href="${item.articleLink}" title="${item.article.articleMainHeadline}" rel="nofollow">${'aemsp_readMore' @ i18n}</a>
+							</p>
+							<div class="metaInfo">
+								<time datetime="${item.article.metaInfo}">${item.article.metaInfo}</time>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="de"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+  	<aemsp_featuredArticleName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_featuredArticleName"
+        sling:message="Featured Artikel"/>
+        
+    <aemsp_featuredArticleLabel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_featuredArticleLabel"
+        sling:message="Artikel"/>
+        
+    <aemsp_featuredArticleDescription
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_featuredArticleDescription"
+        sling:message="Wählen Sie den Artikel der als Top-Artikel angezeigt werden soll"/>
+        
+	<aemsp_articleNotValidLanguageError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidLanguageError"
+		sling:message="Es muss ein Artikel in der aktuellen Sprache gewählt werden."/>
+		
+	<aemsp_articleNotValidTypeError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidTypeError"
+		sling:message="Es muss ein Artikel ausgewählt werden."/>
+		
+	<aemsp_articleNotValidPublishError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidPublishError"
+		sling:message="Der ausgewählte Artikel muss bereits veröffentlicht sein."/>
+		
+	<aemsp_readMore
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_readMore"
+		sling:message="Weiterlesen"/>
+
+</jcr:root>

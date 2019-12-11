@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>io.ecx.aem</groupId>
+	<artifactId>aemsp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>aemsp Website Application</name>
+
+	<organization>
+		<name>Ecx.io Austria</name>
+		<url>http://www.ecx.io</url>
+	</organization>
+
+	<scm>
+		<url>https://stash.ecx.io/scm/oeav/aemsp.git</url>
+		<connection>scm:git:https://stash.ecx.io/scm/oeav/aemsp.git</connection>
+	  <tag>aemsp-0.0.1-SNAPSHOT</tag>
+  </scm>
+	
+	<developers>
+	</developers>
+
+	<properties>
+		<sonar.projectName>AEM aemsp Website</sonar.projectName>
+		<sonar.profile>AEM Profile</sonar.profile>
+		<sonar.language>java</sonar.language>
+		<sonar.dynamicanalysis>false</sonar.dynamicanalysis>
+
+		<encoding>utf-8</encoding>
+		<file.encoding>UTF-8</file.encoding>
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<maven-compiler-plugin-version>3.1</maven-compiler-plugin-version>
+		<maven-resources-plugin-version>2.6</maven-resources-plugin-version>
+		<maven-release-plugin-version>2.5.2</maven-release-plugin-version>
+		<maven-install-plugin-version>2.5.1</maven-install-plugin-version>
+		<maven-scr-plugin-version>1.20.0</maven-scr-plugin-version>
+		<maven-bundle-plugin-version>2.3.7</maven-bundle-plugin-version>
+		<maven-javadoc-plugin-version>2.9.1</maven-javadoc-plugin-version>
+		<maven-source-plugin-version>2.3</maven-source-plugin-version>
+		<maven-clean-plugin>2.6</maven-clean-plugin>
+		<maven-resources-plugin>2.7</maven-resources-plugin>
+		<maven-sling-plugin>2.0.0</maven-sling-plugin>
+		
+		<maven-deploy-plugin-version>2.8</maven-deploy-plugin-version>
+		<maven-assembly-plugin-version>2.4</maven-assembly-plugin-version>
+		<cq-dependencies-version>6.1.11</cq-dependencies-version>
+		<cq-configuration-version>0.0.1-SNAPSHOT</cq-configuration-version>
+		<maven-jslint4java-maven-plugin>2.0.5</maven-jslint4java-maven-plugin>
+		<maven-cq-install-plugin>0.0.8</maven-cq-install-plugin>
+		<cq-group>ecx.io</cq-group>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.ecx.cq.libraries</groupId>
+				<artifactId>dependencies</artifactId>
+				<version>${cq-dependencies-version}</version>
+				<type>pom</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.ecx.cq.libraries</groupId>
+				<artifactId>EcxIoCommon-coreBundle</artifactId>
+				<version>${cq-dependencies-version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.ecx.aem</groupId>
+				<artifactId>aemsp-coreBundle</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.ecx.aem</groupId>
+				<artifactId>aemsp-ui</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>io.ecx.aem</groupId>
+				<artifactId>configuration-coreBundle</artifactId>
+				<version>0.0.1</version>
+				<scope>compile</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+		<dependency>
+			<groupId>io.ecx.cq.libraries</groupId>
+			<artifactId>dependencies</artifactId>
+			<type>pom</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.ecx.cq.libraries</groupId>
+			<artifactId>EcxIoCommon-coreBundle</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.ecx.aem</groupId>
+			<artifactId>configuration-coreBundle</artifactId>
+			<version>${cq-configuration-version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin-version}</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>${maven-resources-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>${maven-release-plugin-version}</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-scm-plugin</artifactId>
+							<version>1.9.4</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>${maven-install-plugin-version}</version>
+				</plugin>
+				<plugin>
+				  <groupId>org.apache.maven.plugins</groupId>
+				  <artifactId>maven-source-plugin</artifactId>
+				  <version>${maven-source-plugin-version}</version>
+				  <executions>
+		              <execution>
+		                <id>attach-sources</id>
+		                <goals>
+		                  <goal>jar</goal>
+		                </goals>
+		              </execution>
+		            </executions>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.felix</groupId>
+										<artifactId>maven-scr-plugin</artifactId>
+										<versionRange>[1.7.4,)</versionRange>
+										<goals>
+											<goal>scr</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-bundle-plugin</artifactId>
+					<version>${maven-bundle-plugin-version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.felix</groupId>
+					<artifactId>maven-scr-plugin</artifactId>
+					<version>${maven-scr-plugin-version}</version>
+					<executions>
+						<execution>
+							<id>generate-scr-descriptor</id>
+							<goals>
+								<goal>scr</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<specVersion>1.1</specVersion>
+						<parseJavadoc>false</parseJavadoc>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>${maven-assembly-plugin-version}</version>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals>
+								<goal>single</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>com.googlecode.jslint4java</groupId>
+					<artifactId>jslint4java-maven-plugin</artifactId>
+					<version>${maven-jslint4java-maven-plugin}</version>
+					<executions>
+						<execution>
+							<id>lint: desktop/js-components</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>lint</goal>
+							</goals>
+							<configuration>
+								<failOnError>true</failOnError>
+								<options>
+									<predef>heroItems, $siteTools, $CQ, acceptCookies, unescape,
+										escape, isCQAuthorMode, MediaElementPlayer, videoElement,
+										alert, $, jQuery, google, editMode, cq5uipath, mejs,
+										INVjQuery, INVTRACKING, INV, tracking, trackGA, _gaq,
+										trackEvent, trackChannel, target, AmCharts, console, CQ</predef>
+									<eqeq>true</eqeq> <!-- If == should be allowed -->
+									<evil>false</evil> <!-- If eval should be allowed -->
+									<newcap>true</newcap> <!-- If initial Caps with constructor functions is optional -->
+									<vars>true</vars> <!-- If multiple var statement per function should be allowed -->
+									<white>true</white>  <!-- If sloppy whitespace is tolerated -->
+									<sloppy>true</sloppy> <!-- If the 'use strict'; pragma is optional -->
+									<plusplus>true</plusplus> <!-- i++ -->
+									<regexp>true</regexp> <!-- Insecure '.' in reqexp -->
+									<maxerr>10000</maxerr> <!-- max error before stop... -->
+									<browser>true</browser> <!-- assuming browse, eg. window research -->
+									<devel>false</devel> <!--logging is allowed (console, alert, etc.) -->
+									<maxlen>160</maxlen> <!-- The maximum length of a source line -->
+									<nomen>true</nomen> <!-- If names may have dangling _ -->
+									<debug>false</debug>
+									<unparam>true</unparam>
+								</options>
+								<sourceFolders>
+									<sourceFolder>${basedir}/src/main/jcr_root/etc/designs/aemsp/clientlibs/js</sourceFolder>
+								</sourceFolders>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>io.ecx.cq.maven</groupId>
+					<artifactId>install-plugin</artifactId>
+					<version>${maven-cq-install-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.sling</groupId>
+					<artifactId>maven-sling-plugin</artifactId>
+					<version>${maven-sling-plugin}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<profiles>
+		<profile>
+			<id>verifyBundleStatus</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>io.ecx.cq.maven</groupId>
+						<artifactId>install-plugin</artifactId>
+						<extensions>true</extensions>
+						<executions>
+							<execution>
+								<id>bundleStatus</id>
+								<goals>
+									<goal>bundleStatus</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<targets>
+								<target>
+									<id>Author</id>
+									<username>${cqserver.userId}</username>
+									<password>${cqserver.password}</password>
+									<url>http://${cqserver.domain}:${cqserver.authorPort}/system/console/bundles.json</url>
+								</target>
+								<target>
+									<id>Publish</id>
+									<username>${cqserver.userId}</username>
+									<password>${cqserver.password}</password>
+									<url>http://${cqserver.domain}:${cqserver.publishPort}/system/console/bundles.json</url>
+								</target>
+							</targets>
+							<bundles>
+								<bundle>
+									<symbolicname>io.ecx.cq.libraries.EcxIoCommon-coreBundle</symbolicname>
+									<version>${cq-dependencies-version}</version>
+								</bundle>
+								<bundle>
+									<symbolicname>io.ecx.cq.libraries.EcxIoPurgeTool-coreBundle</symbolicname>
+									<version>${cq-dependencies-version}</version>
+								</bundle>
+								<bundle>
+									<symbolicname>io.ecx.aem.${project.artifactId}-coreBundle</symbolicname>
+								</bundle>
+								<bundle>
+									<symbolicname>io.ecx.aem.configuration-coreBundle</symbolicname>
+								</bundle>
+							</bundles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>localhost</id>
+			<properties>
+				<cqserver.domain>localhost</cqserver.domain>
+				<cqserver.userId>admin</cqserver.userId>
+				<cqserver.password>admin</cqserver.password>
+				<cqserver.authorPort>4502</cqserver.authorPort>
+				<cqserver.publishPort>4503</cqserver.publishPort>
+			</properties>
+		</profile>
+		<profile>
+			<id>oeav-dev</id>
+			<properties>
+				<cqserver.domain>192.168.10.38</cqserver.domain>
+				<cqserver.userId>admin</cqserver.userId>
+				<cqserver.password>admin</cqserver.password>
+				<cqserver.authorPort>4502</cqserver.authorPort>
+				<cqserver.publishPort>4503</cqserver.publishPort>
+			</properties>
+		</profile>
+		<profile>
+			<id>default</id>
+			<modules>
+				<module>aemsp-coreBundle</module>
+				<module>aemsp-ui</module>
+			</modules>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>server</id>
+			<modules>
+				<module>aemsp-coreBundle</module>
+				<module>aemsp-ui</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>author</id>
+			<modules>
+				<module>aemsp-coreBundle</module>
+				<module>aemsp-ui</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>publish</id>
+			<modules>
+				<module>aemsp-coreBundle</module>
+				<module>aemsp-ui</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>deploy-coreBundle-author</id>
+			<modules>
+				<module>aemsp-coreBundle</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>deploy-coreBundle-publish</id>
+			<modules>
+				<module>aemsp-coreBundle</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>deploy-coreBundle</id>
+			<modules>
+				<module>aemsp-coreBundle</module>
+			</modules>
+		</profile>
+	</profiles>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>ecomplexx-snapshot-repository</id>
+			<name>Ecx Snapshots</name>
+			<url>http://10.0.10.152:8080/nexus/content/repositories/ecx-snapshots/</url>
+			<layout>default</layout>
+		</snapshotRepository>
+		<repository>
+			<uniqueVersion>true</uniqueVersion>
+			<id>ecomplexx-release-repository</id>
+			<name>OEAV Releases</name>
+			<url>http://10.0.10.152:8080/nexus/content/repositories/oeav-releases/</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
+</project>

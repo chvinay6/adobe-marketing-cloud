@@ -1,0 +1,7 @@
+<div data-sly-test="${!properties.text}" class="cq-placeholder" data-emptytext="${'aemsp_contentBoxName' @ i18n}"></div>
+<div data-sly-test="${properties.text && !wcmmode.edit}" class="module module-content module-externalContentBox ${properties.hideOnDesktop} ${properties.hideOnMobile} ${properties.hideOnTablet}">
+	${properties.text @ context='html'}
+</div>
+<div data-sly-test="${properties.text && wcmmode.edit}" class="module module-content module-externalContentBox">
+	${properties.text @ context='html'}
+</div>

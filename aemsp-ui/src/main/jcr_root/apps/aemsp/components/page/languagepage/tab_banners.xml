@@ -1,0 +1,140 @@
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured"
+	jcr:title="aemsp_tab_banners" sling:resourceType="granite/ui/components/foundation/container"
+	cq:showOnCreate="{Boolean}false">
+
+	<items jcr:primaryType="nt:unstructured">
+
+		<general jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/section">
+
+			<layout jcr:primaryType="nt:unstructured" margin="{Boolean}false"
+				sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+			<items jcr:primaryType="nt:unstructured">
+				<column jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/container">
+
+					<items jcr:primaryType="nt:unstructured">
+						<browserHeadline jcr:primaryType="nt:unstructured"
+							jcr:title="aemsp_browser_headline" sling:resourceType="granite/ui/components/foundation/form/fieldset">
+							<items jcr:primaryType="nt:unstructured">
+								<enableBrowserInfo jcr:primaryType="nt:unstructured"
+									text="aemsp_enable" sling:resourceType="granite/ui/components/foundation/form/checkbox"
+									id="enableBrowserInfo" value="{Boolean}true" name="./browserInfoEnabled"
+									class="cq-dialog-checkbox-showhide" showhide-target=".enable-showhide-target-browser" />
+								<enableBrowserInfoContainer
+									jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container"
+									class="enable-showhide-target-browser" showhide-target-value="true">
+									<items jcr:primaryType="nt:unstructured">
+										<text jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+											emptyText="aemsp_browser_text_default" fieldLabel="aemsp_userinfo_text"
+											name="./browserText" />
+										<link jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+											emptyText="aemsp_browser_link_default" rootPath="/content"
+											fieldLabel="aemsp_userinfo_link" name="./browserLink" />
+										<linkText jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textfield"
+											emptyText="aemsp_browser_linkText_default" fieldLabel="aemsp_userinfo_linkText"
+											name="./browserLinkText" />
+										<buttonText jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											emptyText="aemsp_browser_buttonText_default"
+											fieldLabel="aemsp_userinfo_buttonText" name="./browserButtonText" />
+									</items>
+								</enableBrowserInfoContainer>
+							</items>
+						</browserHeadline>
+
+						<cookieHeadline jcr:primaryType="nt:unstructured"
+							jcr:title="aemsp_cookie_headline" sling:resourceType="granite/ui/components/foundation/form/fieldset">
+							<items jcr:primaryType="nt:unstructured">
+								<enableCookieInfo jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/checkbox"
+									text="aemsp_enable" id="enableCookieInfo" value="{Boolean}true"
+									name="./cookieInfoEnabled" class="cq-dialog-checkbox-showhide"
+									showhide-target=".enable-showhide-target-cookie" />
+								<enableCookieInfoContainer
+									jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/foundation/container"
+									class="enable-showhide-target-cookie" showhide-target-value="true">
+									<items jcr:primaryType="nt:unstructured">
+										<head jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/textfield"
+											emptyText="aemsp_cookie_text_headline_default"
+											fieldLabel="aemsp_userinfo_headline" name="./cookieHeadline" />
+										<text jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+											emptyText="aemsp_cookie_text_default" fieldLabel="aemsp_userinfo_text"
+											name="./cookieText" />
+										<enable jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/checkbox"
+											text="aemsp_userinfo_cookie_enable" id="enable" value="{Boolean}true"
+											name="./enableCookieLink" class="cq-dialog-checkbox-showhide"
+											showhide-target=".enable-showhide-target" />
+										<imgShowHideContainer jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container"
+											class="enable-showhide-target" showhide-target-value="true">
+											<items jcr:primaryType="nt:unstructured">
+												<link jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+													emptyText="aemsp_cookie_link_default" fieldLabel="aemsp_userinfo_link"
+													name="./cookieLink" rootPath="/content" />
+												<linkText jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"
+													emptyText="aemsp_cookie_linkText_default" fieldLabel="aemsp_userinfo_linkText"
+													name="./cookieLinkText" />
+											</items>
+										</imgShowHideContainer>
+										<buttonText jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											emptyText="aemsp_cookie_buttonText_default" fieldLabel="aemsp_userinfo_buttonText"
+											name="./cookieButtonText" />
+									</items>
+								</enableCookieInfoContainer>
+							</items>
+						</cookieHeadline>
+						<appHeadline jcr:primaryType="nt:unstructured"
+							jcr:title="aemsp_app_headline" sling:resourceType="granite/ui/components/foundation/form/fieldset">
+							<items jcr:primaryType="nt:unstructured">
+								<enableAppInfo jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/form/checkbox"
+									text="aemsp_enable" id="enableAppInfo" value="{Boolean}true"
+									name="./appBannerActivated" class="cq-dialog-checkbox-showhide"
+									showhide-target=".enable-showhide-target-app" />
+								<enableAppInfoContainer jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="enable-showhide-target-app" showhide-target-value="true">
+									<items jcr:primaryType="nt:unstructured">
+										<title jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="aemsp_app_title_label" emptyText="aemsp_mobileAppBannerTitle"
+											name="./appTitle" />
+										<author jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="aemsp_app_author_label" emptyText="aemsp_mobileAppBannerAuthor"
+											name="./appAuthor" />
+										<price jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="aemsp_app_price_label" emptyText="aemsp_mobileAppBannerPrice"
+											name="./appPrice" />
+										<applecode jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="aemsp_app_appleCode" name="./appleCode" />
+										<googlecode jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+											fieldLabel="aemsp_app_googleCode" name="./googleCode" />
+									</items>
+								</enableAppInfoContainer>
+							</items>
+						</appHeadline>
+					</items>
+
+				</column>
+			</items>
+		</general>
+
+	</items>
+
+</jcr:root>

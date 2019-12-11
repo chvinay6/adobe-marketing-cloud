@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_calendarPageName
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_calendarPageName"
+		sling:message="Kalenderseite"/>
+		
+	<aemsp_calendarPage_tags_label
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_calendarPage_tags_label"
+		sling:message="Kalenderevents-Roottag"/>
+		
+	<aemsp_calendarPage_tags_description
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_calendarPage_tags_description"
+		sling:message="Für die untergeordneten Events werden nur Tags verwendet, die den gewählten Tag beinhalten."/>
+		
+		
+</jcr:root>

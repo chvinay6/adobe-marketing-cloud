@@ -1,0 +1,27 @@
+<div
+	data-sly-use.componentBean="${'io.ecx.aem.aemsp.core.components.par.imageslider.SliderImageComponentBean' @servletSelector='fitIn',renditionSelector='sliderimage',fileExtension='*'}"
+	data-sly-unwrap>
+	<figure>
+		<a 
+			class="fancybox"
+			href="${componentBean.lightboxImage.cachablePath @ context='uri'}"
+			title="Content image" 
+			rel="group${componentBean.sliderId}"
+			data-image-headline="${properties.caption}"
+			data-image-copyright="© ${properties.copyright}"> 
+			<picture>
+				<source 
+					srcset="${componentBean.image.cachablePath @ context='uri'}" media="(min-width: 1280px)">
+				<source 
+					srcset="${componentBean.tabletImage.cachablePath @ context='uri'}"
+					media="(min-width: 992px) and (max-width: 1279px)">
+				<source srcset="${componentBean.mobileImage.cachablePath @ context='uri'}"
+					media="(min-width: 768px) and (max-width: 991px)">
+				<img
+					src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+					srcset="${componentBean.xsImage.cachablePath @ context='uri'}"
+					alt="${componentBean.image.alt}">
+			</picture>
+		</a>
+	</figure>
+</div>

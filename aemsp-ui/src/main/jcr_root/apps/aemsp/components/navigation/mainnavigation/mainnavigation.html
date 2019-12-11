@@ -1,0 +1,33 @@
+<template data-sly-template.navChilditem="${ @ item}">
+
+	<li data-sly-test.hasChildren="${item.children}" class="dropdown-submenu">
+		<a href="${item.path}.html" class="dropdown-toggle-lvl2 ${item.active ? 'active' : ''}">${item.name}<span class="icon-chevron-down"></span></a>
+		<ul class="dropdown-menu" data-sly-test="${item.children}">
+           	<div data-sly-list.child="${item.children}" data-sly-unwrap>
+       			<div data-sly-call="${navChilditem @ item=child}" data-sly-unwrap></div>
+       		</div>
+           </ul>
+	</li>
+	
+	<li data-sly-test="${!hasChildren}" class="${item.active ? 'active' : ''} dropdown">
+		<a href="${item.path}.html">${item.name}</a>
+	</li>
+	
+</template>
+
+<navigation data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.navigation.mainnavigation.MainNavigationComponentBean" data-sly-unwrap>
+	<ul data-sly-list.item="${componentBean.navigation}" class="nav navbar-nav mainNavigation">
+		<li data-sly-test.hasChildren="${item.children}" class="dropdown">
+			<a href="${item.path}.html" class="dropdown-toggle-lvl1 ${item.active ? 'active' : ''}"> ${item.name}<span class="icon-chevron-down"></span></a>
+				<ul class="dropdown-menu" data-sly-test="${item.children}">
+	            	<div data-sly-list.child="${item.children}" data-sly-unwrap>
+	        			<div data-sly-call="${navChilditem @ item=child}" data-sly-unwrap></div>
+	        		</div>
+	            </ul>
+		</li>
+		
+		<li data-sly-test="${!hasChildren}" class="${item.active ? 'active' : ''} dropdown">
+			<a href="${item.path}.html">${item.name}<span data-sly-test="${item.active}" class="sr-only">(current)</span></a>
+		</li>
+	</ul>
+</navigation>

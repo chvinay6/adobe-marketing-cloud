@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="en"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+		
+	<aemsp_articleTeaser
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleTeaser"
+		sling:message="Article Teaser Text"/>
+		
+	<aemsp_tableHeadlineLabel
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tableHeadlineLabel"
+		sling:message="Headline"/>
+		
+	<aemsp_tableHeadlineDescription
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tableHeadlineDescription"
+		sling:message="Leave empty if no headline should be displayed above the table"/>
+</jcr:root>

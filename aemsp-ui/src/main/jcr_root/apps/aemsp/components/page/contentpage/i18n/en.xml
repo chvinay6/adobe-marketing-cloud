@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="en"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_contentPageName
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contentPageName"
+		sling:message="Content Page"/>
+		
+	<aemsp_contentPageHeadline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contentPageHeadline"
+		sling:message="Headline"/>
+		
+	<aemsp_contentPageHeadlineDescription
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contentPageHeadlineDescription"
+		sling:message="Leave empty, if title should be used as headline"/>
+	
+	<aemsp_contentPageHideInNav
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contentPageHideInNav"
+		sling:message="Hide in Main Navigation"/>
+	
+</jcr:root>

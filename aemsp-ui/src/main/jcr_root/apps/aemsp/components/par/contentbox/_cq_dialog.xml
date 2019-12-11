@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	jcr:primaryType="nt:unstructured" jcr:title="aemsp_contentBoxName"
+	sling:resourceType="cq/gui/components/authoring/dialog" width="500">
+	<content jcr:primaryType="nt:unstructured" class="coral-TabPanel-content"
+		sling:resourceType="granite/ui/components/foundation/container">
+
+		<items jcr:primaryType="nt:unstructured">
+			<hideindesktop jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/form/checkbox"
+				name="./hideOnDesktop" text="aemsp_contentBoxHideOnDesktopLabel"
+				value="hidden-md hidden-lg" />
+			<hideinmobile jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/form/checkbox"
+				name="./hideOnMobile" text="aemsp_contentBoxHideOnMobileLabel"
+				value="hidden-xs" />
+			<hideintablet jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/form/checkbox"
+				name="./hideOnTablet" text="aemsp_contentBoxHideOnTabletLabel"
+				value="hidden-sm" />
+
+			<text jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/form/textarea"
+				fieldLabel="aemsp_contentBoxTextLabel" name="./text" />
+
+		</items>
+
+
+	</content>
+
+</jcr:root>

@@ -1,0 +1,22 @@
+<div data-sly-use.componentBean="io.ecx.aem.aemsp.core.components.par.articlepager.ArticlePagerComponentBean" data-sly-unwrap>
+	<nav aria-label="pager">
+		<ul class="pager">
+			<li data-sly-test="${componentBean.previousArticle}" class="previous">
+				<a href="${componentBean.previousArticle.path}" title="">
+					<div class="pager-inner">
+						<span class="date">${componentBean.previousArticle.date}</span>
+						<strong>${componentBean.previousArticle.headline}</strong>
+					</div>
+				</a>
+			</li>
+			<li data-sly-test="${componentBean.nextArticle}" class="next">
+				<a href="${componentBean.nextArticle.path}" title="">
+					 <div class="pager-inner">
+						<span class="date">${componentBean.nextArticle.date}</span>
+						<strong>${componentBean.nextArticle.headline}</strong>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>

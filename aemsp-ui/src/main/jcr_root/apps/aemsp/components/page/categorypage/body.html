@@ -1,0 +1,24 @@
+<body class="orange detail-page">
+
+	<div data-sly-resource="${'googleTagManager' @ resourceType='aemsp/components/par/googletagmanager'}" data-sly-unwrap></div>
+
+	<target data-sly-resource="${'clientcontext' @ resourceType='cq/personalization/components/clientcontext'}" data-sly-unwrap></target>
+
+	<userinfo data-sly-include="userinfo.html" data-sly-unwrap></userinfo>
+	
+    <header data-sly-include="header.html" data-sly-unwrap></header>
+    
+    <div id="page" class="ecx clearfix">
+    	<content data-sly-include="content.html" data-sly-unwrap></content>
+    </div>
+    
+    <footer data-sly-include="footer.html" data-sly-unwrap></footer>
+
+	<div class="ecx">
+		<div class="deviceSelector visible-xs" data-devicetype="xs"></div>
+		<div class="deviceSelector visible-sm" data-devicetype="sm"></div>
+		<div class="deviceSelector visible-md" data-devicetype="md"></div>
+		<div class="deviceSelector visible-lg" data-devicetype="lg"></div>
+	</div>
+
+</body>

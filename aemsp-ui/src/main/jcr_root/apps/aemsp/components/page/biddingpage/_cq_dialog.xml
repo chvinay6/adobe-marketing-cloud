@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    
+    <content jcr:primaryType="nt:unstructured"
+    	sling:resourceType="granite/ui/components/foundation/container">
+    	
+    	<items jcr:primaryType="nt:unstructured">
+    	
+		    <tabs jcr:primaryType="nt:unstructured"
+		    	sling:resourceType="granite/ui/components/foundation/container">
+		    	
+		 	   	<layout jcr:primaryType="nt:unstructured"
+					sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+					
+				<items jcr:primaryType="nt:unstructured">
+					<basic jcr:primaryType="nt:unstructured">
+						<layout jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+							margin="{Boolean}false" />
+						<items jcr:primaryType="nt:unstructured">
+							<column jcr:primaryType="nt:unstructured">
+								<items jcr:primaryType="nt:unstructured">
+									<title jcr:primaryType="nt:unstructured">
+										<items jcr:primaryType="nt:unstructured">
+											<hideinsearch jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/form/checkbox"
+												name="./hideInSearch" 
+												text="aemsp_search_site_exclusion"
+												cq-msm-lockable="hideInSearch"
+												renderReadOnly="{Boolean}true" 
+												allowBulkEdit="{Boolean}true" 
+												value="{Boolean}true"
+												cq:showOnCreate="{Boolean}true" />
+											<searchProperty 
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/form/hidden"
+												name="./searchPage"
+												cq:showOnCreate="{Boolean}true" 
+												value="{Boolean}true"/>
+										</items>
+									</title>
+								</items>
+							</column>
+						</items>
+					</basic>
+					
+					<bidding jcr:primaryType="nt:unstructured"
+						path="/apps/aemsp/components/page/biddingpage/tab_bidding"
+						sling:orderBefore="thumbnail"
+						sling:resourceType="granite/ui/components/foundation/include"/>
+								
+				</items>
+	    	</tabs>    	
+    	</items>
+   	</content>
+</jcr:root>

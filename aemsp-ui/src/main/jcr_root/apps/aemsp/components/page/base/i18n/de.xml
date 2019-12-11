@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+	jcr:language="de"
+	jcr:mixinTypes="[mix:language]"
+	jcr:primaryType="sling:Folder">
+	
+	<aemsp_tab_article_approval
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_article_approval"
+		sling:message="Artikel Genehmigung"/>
+		
+	<aemsp_articleChiefEditor
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleChiefEditor"
+		sling:message="Chefredakteur"/>
+		
+	<aemsp_contact_headline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_headline"
+		sling:message="Kontaktieren Sie uns!"/>
+	
+	<aemsp_contact_subline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_subline"
+		sling:message="Wir beantworten gerne Ihre Fragen"/>
+		
+	<aemsp_contact_error
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_error"
+		sling:message="Ihre Eingabe war fehlerhaft. Bitte versuchen Sie es erneut."/>
+	
+	<aemsp_contact_placeholder_name
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_placeholder_name"
+		sling:message="Name"/>
+	
+	<aemsp_contact_placeholder_mail
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_placeholder_mail"
+		sling:message="E-Mail Adresse"/>
+	
+	<aemsp_contact_mail_error
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_mail_error"
+		sling:message="Die E-Mail Adresse ist nicht korrekt"/>
+	
+	<aemsp_contact_placeholder_message
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_placeholder_message"
+		sling:message="Was Sie uns mitteilen möchten"/>
+		
+	<aemsp_contact_submit
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_submit"
+		sling:message="Abschicken"/>
+	
+	<aemsp_tab_contact
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_tab_contact"
+		sling:message="Kontakt Formular"/>
+	
+	<aemsp_contact_subject
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_subject"
+		sling:message="Thema"/>
+	
+	<aemsp_contact_placeholder_subject
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_placeholder_subject"
+		sling:message="aemspH Kontaktanfrage"/>
+	
+	<aemsp_aemsp_contact_template
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_template"
+		sling:message="Nachricht Schablone"/>
+		
+	<aemsp_contact_template_description
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_template_description"
+		sling:message="Sie können die folgenden vom Benutzer gesendeten Parameter verwenden: name, email, message. Geben Sie sie in die Nachricht ein, indem Sie ${parameter_name} eingeben. Sie können auch HTML-Tags verwenden."/>
+		
+	<aemsp_contact_placeholder_template
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_placeholder_template"
+		sling:message="${name} hat eine Anfrage gesendet: ${message}&lt;br /&gt;Kontaktieren Sie diesen Benutzer unter ${email}"/>
+		
+	<aemsp_contact_thankyou
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_thankyou"
+		sling:message="Vielen Dank!"/>
+	
+	<aemsp_contact_requestsent
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_requestsent"
+		sling:message="Ihre E-Mail wurde erfolgreich an uns geschickt und wir freuen uns darauf Sie in Kürze zu kontaktieren"/>
+	
+	<aemsp_contact_team
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_team"
+		sling:message="Ihr aemspH - Team."/>
+		
+	<aemsp_contact_receiver
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_receiver"
+		sling:message="Empfänger"/>
+		
+	<aemsp_contact_erroroccured
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_erroroccured"
+		sling:message="Ein Fehler ist aufgetreten!"/>
+	
+	<aemsp_contact_tryagain
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_tryagain"
+		sling:message="Bitte überprüfen Sie Ihre Eingabe und versuchen sie es erneut."/>
+	
+	<aemsp_contact_close
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_contact_close"
+		sling:message="Schließen"/>
+		
+	<aemsp_login_credentials
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_login_credentials"
+		sling:message="Bitte geben Sie Name und Passwort ein: "/>
+		
+	<aemsp_login_password_placeholder
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_login_password_placeholder"
+		sling:message="Passwort"/>
+		
+	<aemsp_login_staylogged
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_login_staylogged"
+		sling:message="Angemeldet bleiben"/>
+		
+	<aemsp_login_forgotpassword
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_login_forgotpassword"
+		sling:message="Passwort vergessen?"/>
+		
+	<aemsp_login_register
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_login_register"
+		sling:message="Noch nicht angemeldet? Jetzt abonnieren!"/>
+		
+	<aemsp_login_errorstrong
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_login_errorstrong"
+		sling:message="Login leider nicht erfolgreich"/>
+		
+	<aemsp_login_error
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_login_error"
+		sling:message="Bitte überprüfen Sie Ihre Eingabe!"/>
+	
+   <aemsp_search_site_exclusion
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_search_site_exclusion"
+		sling:message="In Suche ausblenden"/>
+	
+	<aemsp_search_site_exclusion_desc
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_search_site_exclusion_desc"
+		sling:message="Diese Seite wird nicht in der Suche als Resultat angezeigt"/>
+		
+		
+					
+</jcr:root>

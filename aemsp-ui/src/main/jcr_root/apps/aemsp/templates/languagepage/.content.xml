@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description=""
+    jcr:primaryType="cq:Template"
+    jcr:title="aemsp_languagePageName"
+    allowedPaths="/content[^/]*/[^/]*/[^/]*"
+    allowedChildren="[/apps/aemsp/templates/categorypage,/apps/aemsp/templates/contentpage,/apps/aemsp/templates/calendarpage,/apps/aemsp/templates/offerpage,/apps/aemsp/templates/homeconfigpage]"
+    ranking="{Long}5">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        cq:designPath="/etc/designs/aemsp"
+        sling:resourceType="aemsp/components/page/languagepage">
+        <parFixed jcr:primaryType="nt:unstructured"
+			sling:resourceType="aemsp/components/par/lockedpar">
+		</parFixed>
+		<parSidebarFixed jcr:primaryType="nt:unstructured"
+			sling:resourceType="aemsp/components/par/lockedpar">
+		</parSidebarFixed>
+        <footPar jcr:primaryType="nt:unstructured"
+			sling:resourceType="foundation/components/parsys" >
+		</footPar>	
+    </jcr:content>
+
+</jcr:root>

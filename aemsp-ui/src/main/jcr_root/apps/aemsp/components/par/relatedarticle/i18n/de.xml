@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="de"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <aemsp_relatedArticleHeadline
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_relatedArticleHeadline"
+		sling:message="Gleich Weiterlesen..."/>
+		
+  	<aemsp_relatedArticleName
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleName"
+        sling:message="Ähnliche Artikel"/>
+        
+  	<aemsp_relatedArticleNumberFieldLabel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleNumberFieldLabel"
+        sling:message="Limit"/>
+
+  	<aemsp_relatedArticleNumberFieldDescription
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleNumberFieldDescription"
+        sling:message="Maximale Anzahl von ähnlichen Artikeln in dieser Komponente"/>
+
+  	<aemsp_relatedArticleMultifieldLabel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleMultifieldLabel"
+        sling:message="Artikel"/>
+        
+  	<aemsp_relatedArticleMultifieldDescription
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="aemsp_relatedArticleMultifieldDescription"
+        sling:message="Setzen Sie ähnliche Artikel manuell. Lassen Sie Pfadfelder frei, wenn die Komponente bis zum Limit automatisch mit ähnlichen Artikeln gefüllt werden soll."/>   
+
+	<aemsp_relatedArticlesNotValidPreError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_relatedArticlesNotValidPreError"
+		sling:message="Nicht alle der von Ihnen ausgewählten Pfade entsprechen den Anforderungen: "/>
+		
+ 	<aemsp_articleNotValidCurrentArticleError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidCurrentArticleError"
+		sling:message="Es darf nicht der aktuelle Artikel als ähnlicher Artikel verwendet werden "/>
+		
+	<aemsp_articleNotValidLanguageError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidLanguageError"
+		sling:message="Es muss ein Artikel in der aktuellen Sprache gewählt werden"/>
+		
+	<aemsp_articleNotValidTypeError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidTypeError"
+		sling:message="Es muss ein Artikel ausgewählt werden"/>
+		
+	<aemsp_articleNotValidPublishError
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_articleNotValidPublishError"
+		sling:message="Der ausgewählte Artikel muss bereits veröffentlicht sein"/>   
+		
+	<aemsp_readMore
+		jcr:primaryType="sling:MessageEntry"
+		sling:key="aemsp_readMore"
+		sling:message="Weiterlesen"/>
+		
+</jcr:root>
