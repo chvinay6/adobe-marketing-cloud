@@ -84,4 +84,8 @@ public class MetaNavigationComponentBean extends AbstractSightlyComponentBean
         return account;
     }
 
+    public String getName()
+    {
+    	return "name";
+    }
 }
