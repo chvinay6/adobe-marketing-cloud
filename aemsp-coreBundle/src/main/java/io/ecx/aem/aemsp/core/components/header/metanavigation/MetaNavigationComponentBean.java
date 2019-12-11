@@ -86,6 +86,6 @@ public class MetaNavigationComponentBean extends AbstractSightlyComponentBean
 
     public String getName()
     {
-    	return "name";
+    	return "";
     }
 }
