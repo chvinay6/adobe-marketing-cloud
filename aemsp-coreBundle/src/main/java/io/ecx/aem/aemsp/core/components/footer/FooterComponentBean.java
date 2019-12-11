@@ -13,6 +13,7 @@ public class FooterComponentBean extends AbstractSightlyComponentBean
     private static final Logger LOG = LoggerFactory.getLogger(FooterComponentBean.class);
     private static final String FOOTER_PARSYS_NODE_NAME = "footPar";
     private String footParPath;
+    private String footerLink;
 
     @Override
     protected void init() throws Exception
@@ -24,5 +25,10 @@ public class FooterComponentBean extends AbstractSightlyComponentBean
     public String getFootParPath()
     {
         return footParPath;
+    }
+    
+    public void testMethod()
+    {
+    	System.out.println("test msg");
     }
 }
